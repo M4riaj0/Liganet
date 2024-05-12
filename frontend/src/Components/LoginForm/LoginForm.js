@@ -3,6 +3,8 @@ import { Navigate } from 'react-router-dom';
 import './LoginForm.css';
 import { FaUser, FaLock } from 'react-icons/fa';
 import login from '../../Services/auth';
+import LogoImage from '../../Images/LiganetCanchas.jpeg';
+
 
 const LoginForm = ({ handleLogin }) => {
   const [formData, setFormData] = useState({ username: '', password: '' });
@@ -32,28 +34,42 @@ const LoginForm = ({ handleLogin }) => {
   }
 
   return (
-    <div>
-      <div className='wrapper'>
-        <form onSubmit={handleSubmit}>
-          <h1>LIGANET</h1>
+    <div className="login">
+      <div className="left-section">
+        <img src={LogoImage} alt="Login Image" className="logo-image" />
+      </div>
+      
+      <div className="right-section">
+        <h2>LIGANET</h2>
+        <form onSubmit={handleSubmit} className='Formulario'>
 
-          <div className="input-box">
-            <input type="text" name="username" placeholder="Username" value={formData.username} onChange={handleChange} required />
-            <FaUser className='icon' />
+          <div className="input-field">
+            <p className='nombreInput'>Username</p>
+            <input className='input'
+              type="text"
+              name="username"
+              placeholder="Username"
+              onChange={handleChange}
+              required
+            />
           </div>
 
-          <div className="input-box">
-            <input type="password" name="password" placeholder="Password" value={formData.password} onChange={handleChange} required />
-            <FaLock className='icon'/>
+          <div className="input-field">
+            <p className='nombreInput'>Password</p>
+            <input className='input'
+              type="text"
+              name="password"
+              placeholder="Password"
+              onChange={handleChange}
+              required
+            />
           </div>
-
-          {error && <p className="error-message">{error}</p>}
-
-          <button type="submit">Login</button>
-        </form>
         
-        <br></br>
-        <p>don't have an account? <button className="register-link" onClick={() => window.location.href = '/register'}>Sign Up</button></p>
+    
+        <button type="submit" className='button'>Login</button>
+        <button className='button'>Sign Up</button>
+        </form>
+        {error && <p className="error-message">{error}</p>}
         
       </div>
     </div>
