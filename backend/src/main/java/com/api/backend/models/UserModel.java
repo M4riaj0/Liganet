@@ -9,51 +9,51 @@ import jakarta.persistence.Table;
 
 @Entity
 // Cada uno de los campos que añadimos será una columna en la tabla de la base de datos
-@Table(name = "Persona")
+@Table(name = "persona")
 public class UserModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idUser;
+    private Long idPersona;
 
-    @Column(name = "nombre_completo")
+    @Column()
     private String nombreCompleto;
 
-    @Column(name = "nombre_usuario")
+    @Column()
     private String nombreUsuario;
 
-    @Column(name = "correo")
+    @Column( nullable = false, unique = true, length = 45)
     private String correo;
 
-    @Column(name = "celular")
+    @Column()
     private String celular;
 
-    @Column(name = "cedula")
+    @Column(nullable = false, unique = true, length = 45)
     private String cedula;
 
-    @Column(name = "lugar_expedicion")
+    @Column()
     private String lugarExpedicion;
 
-    @Column(name = "fecha_nacimiento")
+    @Column()
     private String fechaNacimiento;
 
-    @Column(name = "genero")
+    @Column()
     private String genero;
 
-    @Column(name = "nacionalidad")
+    @Column()
     private String nacionalidad;
 
-    @Column(name = "contraseña")
+    @Column(nullable = false, length = 64)
     private String contraseña;
 
-    @Column(name = "id_direccion")
+    @Column()
     private Long idDireccion;
 
     public Long getIdUser() {
-        return idUser;
+        return idPersona;
     }
 
-    public void setIdUser(Long idUser) {
-        this.idUser = idUser;
+    public void setIdUser(Long idPersona) {
+        this.idPersona = idPersona;
     }
 
     public String getNombreCompleto() {
