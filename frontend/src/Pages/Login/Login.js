@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Navigate } from 'react-router-dom';
-import './LoginForm.css';
-import { FaUser, FaLock } from 'react-icons/fa';
+import { Navigate, Link } from 'react-router-dom';
+import './Login.css';
 import login from '../../Services/auth';
 import LogoImage from '../../Images/LiganetCanchas.jpeg';
+import InputBox from '../../Components/InputBox/InputBox';
 
 
 const LoginForm = ({ handleLogin }) => {
@@ -44,33 +44,16 @@ const LoginForm = ({ handleLogin }) => {
         <form onSubmit={handleSubmit} className='Formulario'>
 
           <div className="input-field">
-            <p className='nombreInput'>Username</p>
-            <input className='input'
-              type="text"
-              name="username"
-              placeholder="Username"
-              onChange={handleChange}
-              required
-            />
-          </div>
-
-          <div className="input-field">
-            <p className='nombreInput'>Password</p>
-            <input className='input'
-              type="text"
-              name="password"
-              placeholder="Password"
-              onChange={handleChange}
-              required
-            />
+            <InputBox name='Username' />
+            <InputBox name='Password' />
           </div>
         
-    
-        <button type="submit" className='button'>Login</button>
-        <button className='button'>Sign Up</button>
+         <button type="submit" className='button'>Login</button>
+          <Link to='/SignUp'>
+            <button className='button'>Sign Up</button>
+          </Link>
         </form>
         {error && <p className="error-message">{error}</p>}
-        
       </div>
     </div>
   );
