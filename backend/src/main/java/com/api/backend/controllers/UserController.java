@@ -33,7 +33,7 @@ public class UserController {
     }
 
     @PutMapping("/{id}")
-    public Optional<UserModel> updateUser(@PathVariable Long id, @RequestBody UserModel request) {
+    public Optional<UserModel> updateUser(@PathVariable("id") Long id, @RequestBody UserModel request) {
         return this.userService.updateUser(id, request);
     }
 
