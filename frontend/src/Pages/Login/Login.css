@@ -4,7 +4,7 @@
     width: 100%;
 }
 
-.right-section {
+.login-right-section {
     width: 50%; 
     display: flex;
     justify-content: center;
@@ -12,7 +12,7 @@
     flex-direction: column;
 }
 
-.left-section {
+.login-left-section {
     width: 50%;
     display:flex;
     justify-content: center;
@@ -23,12 +23,13 @@
     background-position: center;
 }
 
-.ContentForm {
-    width: 80%;
+.login-ContentForm {
+    width: 100%; /* Ajusta el ancho según sea necesario */
+    max-width: 500px; /* Limita el ancho máximo para evitar desbordamiento */
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+  }
 
 .Formulario {
     width: 100%;
@@ -42,17 +43,3 @@
     margin-top: 10px;
 }
 
-.button {
-    width: 100%;
-    padding: 8px;
-    margin-top: 10px;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.button:hover {
-    background-color: #0056b3;
-}

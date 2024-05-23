@@ -23,7 +23,7 @@ function SignUp() {
             <div className="left-section">
             </div>
 
-            <div className="right-section">
+            <div className="Signup-right-section">
                 <Stepper steps={steps} onSubmit={handleSubmit} />
             </div>
         </div>
