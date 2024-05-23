@@ -1,42 +1,42 @@
 * {
-  margin: 0;
-  padding: 0;
+  margin: 0; /* Establece el margen exterior de un elemento en cero */
+  padding: 0; /* Establece el relleno de todos los elementos en cero */
 }
 
 html,
-body {
-  font-size: 18px;
-  background-color: rgb(250, 254, 255);
+body {                  /* Establece el tamaño de fuente predeterminado para todos los elementos */
+  font-size: 18px;      /* 1rem = 18px */
+  background-color: rgb(250, 254, 255); /* Establece el color de fondo de la página */
 
 }
 
 h1 {
-  max-width: 940px;
-  font-size: 2.5rem;
-  font-family: Sora, sans-serif;
-  font-weight: 700;
-  line-height: 1.1;
-  margin: 40px 0;
+  max-width: 940px;             /* Establece el ancho máximo de un elemento */
+  font-size: 2.5rem;            /* Establece el tamaño de fuente de un elemento */
+  font-family: Sora, sans-serif;/* Establece la fuente de un elemento */
+  font-weight: 700;             /* Establece el grosor de la fuente de un elemento */
+  line-height: 1.1;             /* Establece la altura de línea de un elemento */
+  margin: 40px 0;               /* Establece el margen el primer valor de forma vertical y el segundo en horizontal/
 }
 
 h2 {
-  font-size: 2rem;
-  font-family: Sora, sans-serif;
-  font-weight: 700;
-  line-height: 1.1;
-  margin: 40px 0;
+  font-size: 2rem;                /* Establece el tamaño de fuente de un elemento */
+  font-family: Sora, sans-serif;  /* Establece la fuente de un elemento */
+  font-weight: 700;               /* Establece el grosor de la fuente de un elemento */
+  line-height: 1.1;               /* Establece la altura de línea de un elemento */
+  margin: 40px 0;                 /* Establece el margen superior con valor de  */
 }
 
 .button {
-  width: 100%;
-  padding: 10px;
-  background-color: #090126;
-  color: #fff;
-  cursor: pointer;
-  border-radius: 8px;
-  margin-bottom: 16px;
+  width: 100%;                    /* Establece el ancho de un elemento */
+  padding: 8px;                  /* Establece el relleno de un elemento */
+  background-color: #090126;    /* Establece el color de fondo de un elemento */
+  color: #fff;                  /* Establece el color del texto de un elemento */
+  cursor: pointer;                /* Establece el tipo de cursor de un elemento */
+  border-radius: 8px;             /* Establece el radio de borde de un elemento */
+  margin-bottom: 16px;            /* Establece el margen inferior de un elemento */
 }
 
 .button:hover {
-  background-color: #0d0d0d;
+  background-color: #0d0d0d;    /* Establece el color de fondo de un elemento */
 }

@@ -1,57 +1,58 @@
-
 .login {
-    width: 100%;
     display: flex;
-    align-items: center;
     height: 100vh;
-    background-color: transparent;
-    box-sizing: border-box;
-}
-
-.left-section {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    color: #fff;
+    width: 100%;
 }
 
 .right-section {
     width: 50%; 
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    text-align: center;
+    flex-direction: column;
 }
 
-.logo-image{
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
-    display: block;
-    object-fit: contain;
+.left-section {
+    width: 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-image: url('../../Images/LiganetCanchas.jpeg');
+    background-size: cover;
+    background-position: center;
 }
 
-.login .error-message {
+.ContentForm {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Formulario {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.error-message {
     color: red;
-    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
-.input {
+.button {
     width: 100%;
-    padding: 8px 8px 8px 8px;
-    margin-bottom: 16px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-
+    padding: 8px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
 }
 
-.input-field .nombreInput {
-    width: 100%;
-    text-align: left;
+.button:hover {
+    background-color: #0056b3;
 }
-
