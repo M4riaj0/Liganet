@@ -15,37 +15,37 @@ public class UserModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idPersona;
 
-    @Column()
+    @Column(name = "nombre_completo")
     private String nombreCompleto;
 
-    @Column()
+    @Column(name = "nombre_usuario")
     private String nombreUsuario;
 
-    @Column( nullable = false, unique = true, length = 45)
+    @Column(name="correo" , nullable = false, unique = true)
     private String correo;
 
-    @Column()
+    @Column(name = "celular")
     private String celular;
 
-    @Column(nullable = false, unique = true, length = 45)
+    @Column(nullable = false, unique = true, name = "cedula")
     private String cedula;
 
-    @Column()
+    @Column(name = "lugar_expedicion")
     private String lugarExpedicion;
 
-    @Column()
+    @Column(name = "fecha_nacimiento")
     private String fechaNacimiento;
 
-    @Column()
+    @Column(name = "genero")
     private String genero;
 
-    @Column()
+    @Column(name = "nacionalidad")
     private String nacionalidad;
 
-    @Column(nullable = false, length = 64)
+    @Column(nullable = false, name = "contraseña")
     private String contraseña;
 
-    @Column()
+    @Column(name = "id_direccion")
     private Long idDireccion;
 
     public Long getIdUser() {

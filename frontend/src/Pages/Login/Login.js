@@ -7,14 +7,15 @@ import {FaUser, FaLock} from 'react-icons/fa';
 
 
 const LoginForm = ({ handleLogin }) => {
-  const [formData, setFormData] = useState({ username: '', password: '' });
+  const [formData, setFormData] = useState({ usuario: '', contraseña: '' });
   const [error, setError] = useState('');
   const [loggedIn, setLoggedIn] = useState(false);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await login(formData.username, formData.password);
+      console.log('Datos de inicio de sesión:', formData);
+      await login(formData.usuario, formData.contraseña);
       handleLogin();
       setLoggedIn(true);
     } catch (error) {
@@ -23,6 +24,7 @@ const LoginForm = ({ handleLogin }) => {
   };
 
   const handleChange = (event) => {
+    console.log('Cambiando:', event.target.name, event.target.value);
     setFormData({
       ...formData,
       [event.target.name]: event.target.value,
@@ -53,7 +55,7 @@ const LoginForm = ({ handleLogin }) => {
             />
             <InputBox
               name='Contraseña'
-              type='contraseño'
+              type='password'
               placeholder='Contraseña'
               value={formData.contraseña}
               onChange={handleChange}
