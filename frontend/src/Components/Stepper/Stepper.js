@@ -27,9 +27,9 @@ const Stepper = ({steps, onSubmit}) => {
                 {steps[currentStep].component}
             </div>
             <div className="button-container">
-                {currentStep > 0 && <button className="button" onClick={handleBack}>Back</button>}
-                {currentStep < steps.length - 1 && <button className="button" onClick={handleNext}>Next</button>}
-                {currentStep === steps.length - 1 && <button className="button" onClick={handleSubmit}>Submit</button>}
+                {currentStep > 0 && <button className="button" onClick={handleBack}>Atrás</button>}
+                {currentStep < steps.length - 1 && <button className="button" onClick={handleNext}>Siguiente</button>}
+                {currentStep === steps.length - 1 && <button className="button" onClick={handleSubmit}>Confirmar</button>}
             </div>
         </div>
     );
