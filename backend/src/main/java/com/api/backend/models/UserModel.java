@@ -9,11 +9,11 @@ import jakarta.persistence.Table;
 
 @Entity
 // Cada uno de los campos que añadimos será una columna en la tabla de la base de datos
-@Table(name = "Persona")
+@Table(name = "persona")
 public class UserModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idUser;
+    private Long idPersona;
 
     @Column(name = "nombre_completo")
     private String nombreCompleto;
@@ -21,13 +21,13 @@ public class UserModel {
     @Column(name = "nombre_usuario")
     private String nombreUsuario;
 
-    @Column(name = "correo")
+    @Column(name="correo" , nullable = false, unique = true)
     private String correo;
 
     @Column(name = "celular")
     private String celular;
 
-    @Column(name = "cedula")
+    @Column(nullable = false, unique = true, name = "cedula")
     private String cedula;
 
     @Column(name = "lugar_expedicion")
@@ -42,18 +42,18 @@ public class UserModel {
     @Column(name = "nacionalidad")
     private String nacionalidad;
 
-    @Column(name = "contraseña")
+    @Column(nullable = false, name = "contraseña")
     private String contraseña;
 
     @Column(name = "id_direccion")
     private Long idDireccion;
 
     public Long getIdUser() {
-        return idUser;
+        return idPersona;
     }
 
-    public void setIdUser(Long idUser) {
-        this.idUser = idUser;
+    public void setIdUser(Long idPersona) {
+        this.idPersona = idPersona;
     }
 
     public String getNombreCompleto() {

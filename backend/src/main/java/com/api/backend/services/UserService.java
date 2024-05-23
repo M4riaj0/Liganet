@@ -23,6 +23,10 @@ public class UserService {
         return userRepository.save(user); // en JPA se usa save() para guardar un registro
     }
 
+    public Optional<UserModel> getUserByUserName(String nombreUsuario) {
+        return userRepository.findByNombreUsuario(nombreUsuario);
+    }
+
     public Optional<UserModel> getUserById(Long id) {
         return Optional.ofNullable(userRepository.findById(id).get());        
         // return userRepository.findById(id);

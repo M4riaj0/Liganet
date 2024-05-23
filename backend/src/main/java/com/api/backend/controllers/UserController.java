@@ -1,6 +1,8 @@
 package com.api.backend.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import com.api.backend.models.UserModel;
@@ -28,12 +30,18 @@ public class UserController {
     }
 
     @PostMapping
-    public UserModel createUser(@RequestBody UserModel user) {
-        return this.userService.createUser(user);
+    public ResponseEntity<?> createUser(@RequestBody UserModel user) {
+        try {
+            UserModel newUser = this.userService.createUser(user);
+            return new ResponseEntity<>(newUser, HttpStatus.CREATED);
+        } catch (Exception e) {
+            e.printStackTrace(); // Imprime la excepción en la consola para su diagnóstico
+            return new ResponseEntity<>("Error al crear usuario", HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
     @PutMapping("/{id}")
-    public Optional<UserModel> updateUser(@PathVariable Long id, @RequestBody UserModel request) {
+    public Optional<UserModel> updateUser(@PathVariable("id") Long id, @RequestBody UserModel request) {
         return this.userService.updateUser(id, request);
     }
 
