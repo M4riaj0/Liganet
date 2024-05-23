@@ -1,0 +1,12 @@
+.button-container {
+    display: flex;
+    justify-content:space-between;
+    width: 100%;
+}
+
+
+.button {
+    width: auto;
+    margin: 0 8px;
+}
+    

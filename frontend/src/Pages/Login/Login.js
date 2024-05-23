@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Navigate, Link } from 'react-router-dom';
 import './Login.css';
 import login from '../../Services/auth';
-import LogoImage from '../../Images/LiganetCanchas.jpeg';
 import InputBox from '../../Components/InputBox/InputBox';
+import {FaUser, FaLock} from 'react-icons/fa';
 
 
 const LoginForm = ({ handleLogin }) => {
@@ -35,25 +35,35 @@ const LoginForm = ({ handleLogin }) => {
 
   return (
     <div className="login">
+      
       <div className="left-section">
-        <img src={LogoImage} alt="Login Image" className="logo-image" />
       </div>
       
       <div className="right-section">
-        <h2>LIGANET</h2>
-        <form onSubmit={handleSubmit} className='Formulario'>
-
-          <div className="input-field">
-            <InputBox name='Username' />
-            <InputBox name='Password' />
-          </div>
-        
-         <button type="submit" className='button'>Login</button>
-          <Link to='/SignUp'>
-            <button className='button'>Sign Up</button>
-          </Link>
-        </form>
-        {error && <p className="error-message">{error}</p>}
+        <div className='ContentForm'>  
+          <h2>LIGANET</h2>
+          <form onSubmit={handleSubmit} className='Formulario'>
+            <InputBox
+              name='Usuario'
+              type='text'
+              placeholder='Usuario'
+              value={formData.usuario}
+              onChange={handleChange}
+              icon={<FaUser/>}
+            />
+            <InputBox
+              name='Contraseña'
+              type='contraseño'
+              placeholder='Contraseña'
+              value={formData.contraseña}
+              onChange={handleChange}
+              icon={<FaLock/>}
+            />
+            <button type="submit" className='button'>Ingresar</button>
+          </form>
+          <Link to='/SignUp' className='link'>Crear una cuenta</Link>
+          {error && <p className="error-message">{error}</p>}
+        </div>
       </div>
     </div>
   );

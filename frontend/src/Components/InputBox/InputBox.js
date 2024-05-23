@@ -1,13 +1,23 @@
-import React from "react";
-import "./InputBox.css";
+import React from 'react';
+import './InputBox.css';
 
-function InputBox(props) {
-    return (
-        <div className="input-box">
-            <p className="NombreInput">{props.name}</p>
-            <input type="text" placeholder={props.name} className="Casilla"/>
-        </div>
-    );
-}
+const InputBox = ({ name, type = 'text', placeholder, value, onChange, icon }) => {
+  return (
+    <div className="input-box">
+      <label className="NombreInput">{name}</label>
+      <div className="input-icon-wrapper">
+        <input
+          type={type}
+          name={name.toLowerCase()}
+          placeholder={placeholder || name}
+          value={value}
+          onChange={onChange}
+          className="input"
+        />
+        {icon && <div className="input-icon">{icon}</div>}
+      </div>
+    </div>
+  );
+};
 
 export default InputBox;

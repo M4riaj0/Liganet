@@ -2,20 +2,39 @@
 
 .input-box {
     display: flex;
-    align-items: center;
     flex-direction: column;
+    width: 100%;
+    margin-bottom: 16px;
+    margin-left: 8px;;
+}
+
+.NombreInput label {
+    width: 100%;
+    text-align: left;
+    padding: 8px 0px;
 }
 
 .input-box input {
-    padding: 10px;
-    margin-bottom: 16px;
+    width: 100%;
+    padding: 8px;
+    margin-top: 8px;
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 16px;
 }
 
-.NombreInput {
-    width: 100%;
-    text-align: left;
-    padding: 8px 8px 8px 8px;
-}
+.input-icon-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .input {
+    padding-right: 30px; /* Ajusta este valor según el tamaño de tu icono */
+  }
+  
+  .input-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
