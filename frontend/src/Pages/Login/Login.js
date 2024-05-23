@@ -14,6 +14,7 @@ const LoginForm = ({ handleLogin }) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
+      console.log('Datos de inicio de sesión:', formData);
       await login(formData.username, formData.password);
       handleLogin();
       setLoggedIn(true);
@@ -23,6 +24,7 @@ const LoginForm = ({ handleLogin }) => {
   };
 
   const handleChange = (event) => {
+    console.log('Cambiando:', event.target.name, event.target.value);
     setFormData({
       ...formData,
       [event.target.name]: event.target.value,
@@ -44,8 +46,14 @@ const LoginForm = ({ handleLogin }) => {
         <form onSubmit={handleSubmit} className='Formulario'>
 
           <div className="input-field">
-            <InputBox name='Username' />
-            <InputBox name='Password' />
+            <InputBox name='username'
+              value={formData.username}
+              onChange={handleChange} />
+              
+            <InputBox name='password'
+              type='password'
+              value={formData.password}
+              onChange={handleChange} />
           </div>
         
          <button type="submit" className='button'>Login</button>

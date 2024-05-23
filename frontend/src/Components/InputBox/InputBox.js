@@ -1,11 +1,18 @@
 import React from "react";
 import "./InputBox.css";
 
-function InputBox(props) {
+function InputBox({ name, value, onChange, type = 'text' }) {
     return (
         <div className="input-box">
-            <p className="NombreInput">{props.name}</p>
-            <input type="text" placeholder={props.name} className="Casilla"/>
+            <p className="NombreInput">{name}</p>
+            <input
+                type={type}
+                name={name}
+                placeholder={name}
+                className="Casilla"
+                value={value}
+                onChange={onChange}
+            />
         </div>
     );
 }
