@@ -36,11 +36,11 @@ const LoginForm = ({ handleLogin }) => {
   return (
     <div className="login">
       
-      <div className="left-section">
+      <div className="login-left-section">
       </div>
       
-      <div className="right-section">
-        <div className='ContentForm'>  
+      <div className="login-right-section">
+        <div className='login-ContentForm'>  
           <h2>LIGANET</h2>
           <form onSubmit={handleSubmit} className='Formulario'>
             <InputBox
