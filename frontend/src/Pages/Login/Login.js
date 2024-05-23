@@ -53,7 +53,7 @@ const LoginForm = ({ handleLogin }) => {
             />
             <InputBox
               name='Contraseña'
-              type='contraseño'
+              type='password'
               placeholder='Contraseña'
               value={formData.contraseña}
               onChange={handleChange}
