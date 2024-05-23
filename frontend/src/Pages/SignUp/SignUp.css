@@ -1,32 +1,66 @@
-.Main {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Sora', sans-serif;
+}
+
+.SignUp {
     display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
+    width: 100%;
 }
 
-.image-section {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
+.left-section {
+    width: 40%;
+    display:flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    background-image: url('../../Images/LiganetCanchas.jpeg');
+    background-size: cover;
+    background-position: center;
 }
 
-.logo-image{
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
-    display: block;
-    object-fit: contain;
+.right-section {
+    width: 60%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.form-section {
-    width: 50%; 
+
+.ContentForm {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    text-align: center;
 }
+
+
+.Formulario {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.TresCampos {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
