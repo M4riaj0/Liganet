@@ -27,16 +27,25 @@ h2 {
   margin: 40px 0;                 /* Establece el margen superior con valor de  */
 }
 
-.button {
-  width: 100%;                    /* Establece el ancho de un elemento */
-  padding: 8px;                  /* Establece el relleno de un elemento */
-  background-color: #090126;    /* Establece el color de fondo de un elemento */
-  color: #fff;                  /* Establece el color del texto de un elemento */
-  cursor: pointer;                /* Establece el tipo de cursor de un elemento */
-  border-radius: 8px;             /* Establece el radio de borde de un elemento */
-  margin-bottom: 16px;            /* Establece el margen inferior de un elemento */
+button {
+  flex: 1;                      /* Añadido para que los botones se estiren para ocupar el espacio disponible */
+  padding: 8px;
+  background-color: #090126;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 8px;
+  margin: 0 10px;               /* Añadido para crear espacio entre los botones */
+  margin-bottom: 16px;
 }
 
-.button:hover {
-  background-color: #0d0d0d;    /* Establece el color de fondo de un elemento */
+button:first-child {
+  margin-left: 0;               /* Añadido para que el primer botón no tenga margen a la izquierda */
+}
+
+button:last-child {
+  margin-right: 0;              /* Añadido para que el último botón no tenga margen a la derecha */
+}
+
+button:hover {
+  background-color: #0d0d0d;
 }

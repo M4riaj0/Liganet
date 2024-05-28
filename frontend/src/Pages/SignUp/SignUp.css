@@ -29,34 +29,11 @@ html, body {
 
 .Signup-right-section {
     width: 60%; 
+    margin: 32px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-
-
-.ContentForm {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-.Formulario {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-.TresCampos {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-
 }
 
 .error-message {

@@ -1,0 +1,63 @@
+Datos Personales
+*nombre_completo
+*celular
+*cedula
+*lugar_expedicion
+*fecha_nacimiento
+*genero
+*nacionalidad
+*direccion
+*ciudad
+*departamento
+*pais
+*codigo_postal
+
+ 
+ /* id_direccion int AI PK 
+direccion varchar(255) 
+ciudad varchar(100) 
+departamento varchar(100) 
+pais varchar(100) 
+codigo_postal varchar(20)
+@Table(name = "persona")
+public class UserModel {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long idPersona;
+
+    @Column(name = "nombre_completo")
+    private String nombreCompleto;
+
+    @Column(name = "nombre_usuario")
+    private String nombreUsuario;
+
+    @Column(name="correo" , nullable = false, unique = true)
+    private String correo;
+
+    @Column(name = "celular")
+    private String celular;
+
+    @Column(nullable = false, unique = true, name = "cedula")
+    private String cedula;
+
+    @Column(name = "lugar_expedicion")
+    private String lugarExpedicion;
+
+    @Column(name = "fecha_nacimiento")
+    private String fechaNacimiento;
+
+    @Column(name = "genero")
+    private String genero;
+
+    @Column(name = "nacionalidad")
+    private String nacionalidad;
+
+    @Column(nullable = false, name = "contraseña")
+    private String contraseña;
+
+    @Column(name = "id_direccion")
+    private Long idDireccion;
+
+}
+
+*/

@@ -1,40 +1,46 @@
 /* InputBox.css */
 
 .input-box {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-bottom: 16px;
-    margin-left: 8px;;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 16px;
+  margin-left: 8px;
 }
 
-.NombreInput label {
-    width: 100%;
-    text-align: left;
-    padding: 8px 0px;
+.input-box label {
+  width: 100%;
+  text-align: left;
+  padding: 8px 0;
 }
 
 .input-box input {
-    width: 100%;
-    padding: 8px;
-    margin-top: 8px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 16px;
+  width: 100%;
+  padding: 8px;
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el ancho total */
 }
 
 .input-icon-wrapper {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .input {
-    padding-right: 30px; /* Ajusta este valor según el tamaño de tu icono */
-  }
-  
-  .input-icon {
-    position: absolute;
-    right: 10px;
-    top: 60%;
-    transform: translateY(-50%);
-  }
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon-wrapper input {
+  width: 100%;
+  padding-right: 30px; /* Ajusta este valor según el tamaño de tu icono */
+  box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el ancho total */
+}
+
+.input-icon {
+  position: absolute;
+  right: 10px;
+  top: 60%;
+  transform: translateY(-50%);
+  pointer-events: none; /* Asegura que el icono no interfiera con la interacción del input */
+}
