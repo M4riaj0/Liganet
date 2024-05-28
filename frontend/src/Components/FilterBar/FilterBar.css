@@ -1,0 +1,40 @@
+.filter-bar {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  background-color: #FFFFFF;
+  border-radius: 0px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.chip, .chip-reset {
+  background-color: #0d043124;
+  color: #0d0431f3;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chip:hover, .chip-reset:hover {
+  background-color: #d1d8df;
+  color: #0d0431f3;
+}
+
+.chip-reset {
+  padding: 10px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+}
+
+
+.chip-reset svg {
+  width: 20px;
+  height: 20px;
+}

@@ -1,0 +1,40 @@
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #0d043124;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  margin-top: 0%;
+  scroll-behavior: smooth;
+  padding: 0 20px; /* Ajuste para que el padding no incluya las flechas */
+  flex-grow: 1;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #0D0431;
+  user-select: none;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.left {
+  left: -3px; /* Ajuste para mover la flecha fuera del contenedor */
+}
+
+.right {
+  right: -3px; /* Ajuste para mover la flecha fuera del contenedor */
+}
+
+.arrow.disabled {
+  display: none;
+}

@@ -1,0 +1,58 @@
+.search-sections {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  overflow-y: auto; /* Asegúrate de que el contenido sea desplazable */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.search-sections::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari, and Opera */
+}
+
+.section {
+  background-color: transparent; /* Asegúrate de que el fondo sea transparente */
+  border-radius: 10px;
+  color: #0D0431;
+  margin-bottom: 20px; /* Espacio entre secciones */
+  padding: 0px;
+}
+
+h1 {
+  margin-bottom: 0;
+  padding: 0px 0; /* Ajustar el espaciado superior e inferior */
+  color: #0d0431;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  background-color: #0d043124; /* Color de fondo para el carrusel */
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.arrow {
+  cursor: pointer;
+  font-size: 24px;
+  color: #0D0431;
+  user-select: none;
+}
+
+.left {
+  position: absolute;
+  left: -40px;
+}
+
+.right {
+  position: absolute;
+  right: -40px;
+}

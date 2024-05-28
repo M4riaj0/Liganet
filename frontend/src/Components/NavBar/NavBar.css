@@ -1,42 +1,56 @@
 .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #0D0431;
-    padding: 10px 20px;
-    color: white;
-  }
-  
-  .app-name {
-    font-size: 24px;
-  }
-  
-  .search-container {
-    display: flex;
-    align-items: center;
-    position: relative;
-    width: 50%;
-  }
-  
-  .search-input {
-    width: 100%;
-    padding: 8px 10px 8px 40px;
-    border-radius: 20px;
-    border: none;
-    outline: none;
-  }
-  
-  .search-icon {
-    position: absolute;
-    left: 10px; /* Posiciona el icono a la izquierda */
-    color: #0D0431; /* Cambia el color del icono */
-    pointer-events: none;
-  }
-  
-  
-  .profile-image {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0D0431;
+  padding: 10px 20px;
+  color: white;
+}
+
+.app-name {
+  font-size: 24px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 50%;
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px 10px 8px 40px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px; /* Posiciona el icono a la izquierda */
+  color: #0D0431; /* Cambia el color del icono */
+
+}
+
+.search-button {
+  position: absolute;
+  background-color: white;
+  border: none;
+  border-radius: 0 20px 20px 0;
+  color: #0D0431;
+  cursor: pointer;
+  padding: 7px 16px;
+  right: 0px; /* Posiciona el icono a la izquierda */
+}
+
+.search-button:hover {
+  background-color: #0d043124;
+  color: white;
+}
+
+.profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}

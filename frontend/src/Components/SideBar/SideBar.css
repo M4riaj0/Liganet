@@ -1,7 +1,7 @@
 .sidebar-container {
   background-color: #0D0431;
   width: 200px;
-  height: 100vh;
+  height: 100%;
   padding: 20px;
   color: white;
 }
