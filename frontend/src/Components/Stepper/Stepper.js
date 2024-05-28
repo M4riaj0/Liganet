@@ -8,20 +8,29 @@ const Stepper = ({steps, onSubmit}) => {
     const [currentStep, setCurrentStep] = useState(0);
     const [formData, setFormData] = useState({
         //Inicializar los datos del formulario
-        NombreCompleto: '',
-        NumeroDocumento: '',
-        LugarExpedicion: '',
-        FechaNacimiento: '',
-        Celular: '',
-        Genero: '',
-        Nacionalidad: '',
-        Pais: '',
-        Departamento: '',
-        Direccion: '',
-        Ciudad: '',
-        Ejemplo1: '',
-        Ejemplo2: '',
-
+        nombre_completo: '',
+        Cedula: '',
+        lugar_expedicion: '',
+        fecha_nacimiento: '',
+        celular: '',
+        genero: '',
+        nacionalidad: '',
+        pais: '',
+        departamento: '',
+        direccion: '',
+        ciudad: '',
+        altura: '',
+        años_experiencia: '',
+        nivel_competencia: '',
+        numero_equipacion: '',
+        perfil_dominante: '',
+        peso: '',
+        pierna_dominante: '',
+        posicion_principal: '',
+        posicion_secundaria: '',
+        nombre_usuario: '',
+        correo: '',
+        contraseña: '' 
     });
 
     const handleNext = () => {

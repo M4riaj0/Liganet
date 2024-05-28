@@ -3,8 +3,8 @@ import React from "react";
 const Step1 = ({formData, handleChange, handleNext}) => {
 
     return (
-        <div className="Step-Content">
-            <h2 className="TituloStep">Información Personal</h2>
+        <div>
+            <h2>Información Personal</h2>
             <form>
                 <label>
                     Nombre Completo:
@@ -19,7 +19,7 @@ const Step1 = ({formData, handleChange, handleNext}) => {
                     <label>
                         Numero de documento:
                         <input
-                            type='text'
+                            type='number'
                             name='NumeroDocumento'
                             value={formData.NumeroDocumento}
                             onChange={handleChange}
@@ -39,7 +39,7 @@ const Step1 = ({formData, handleChange, handleNext}) => {
                     <label>
                         Fecha de nacimiento:
                         <input
-                            type='text'
+                            type='date'
                             name='FechaNacimiento'
                             value={formData.FechaNacimiento}
                             onChange={handleChange}
@@ -48,7 +48,7 @@ const Step1 = ({formData, handleChange, handleNext}) => {
                     <label>
                         Celular:
                         <input
-                            type='text'
+                            type='number'
                             name='Celular'
                             value={formData.Celular}
                             onChange={handleChange}

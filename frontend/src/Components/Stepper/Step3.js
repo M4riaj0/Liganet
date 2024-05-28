@@ -6,15 +6,46 @@ const Step3 = ({ formData, handleChange, handleBack, handleSubmit }) => {
     <div>
       <h2>Perfil</h2>
       <form>
-      <label>
-        Ejemplo1:
-          <input
-             type='text'
-             name='Ejemplo4'
-             value={formData.Ejemplo4}
-             onChange={handleChange}
-          />
-        </label>
+        <div className='VariosCampos'>
+          <label>
+            Nombre de usuario:
+            <input
+              type='text'
+              name='nombre_usuario'
+              value={formData.nombre_usuario}
+              onChange={handleChange}
+            />
+          </label>
+          <label>
+            Correo:
+            <input
+              type='email'
+              name='correo'
+              value={formData.correo}
+              onChange={handleChange}
+            />
+          </label>
+        </div>
+        <div className='VariosCampos'>
+          <label>
+            Contraseña:
+            <input
+              type='password'
+              name='contraseña'
+              value={formData.contraseña}
+              onChange={handleChange}
+            />
+          </label>
+          <label>
+            Confirmar contraseña:
+            <input
+              type='password'
+              name='confirmar_contraseña'
+              value={formData.confirmar_contraseña}
+              onChange={handleChange}
+            />
+          </label>
+        </div>
         <div className='ButtonContainer'>
           <button type='button' onClick={handleBack}>Atrás</button>
           <button type='button' onClick={handleSubmit}>Enviar</button>
