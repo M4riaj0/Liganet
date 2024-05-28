@@ -12,6 +12,21 @@ Datos Personales
 *pais
 *codigo_postal
 
+JUGADOR
+altura
+años_experiencia
+nivel_competencia
+numero-equipacion
+perfil_dominante
+persona
+pierna_dominante
+posicion_principal
+posicion_secundaria
+
+Faltan
+correo
+
+
  
  /* id_direccion int AI PK 
 direccion varchar(255) 
