@@ -1,16 +1,25 @@
 import React from 'react';
-import InputBox from '../../Components/InputBox/InputBox';
 
-const Step3 = ({ onChange, data }) => {
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    onChange({ [name]: value });
-  };
-
+const Step3 = ({ formData, handleChange, handleBack, handleSubmit }) => {
+  
   return (
     <div>
       <h2>Perfil</h2>
-      <InputBox name='Ejemplo' type='Ejemplo' placeholder='Ejemplo' />
+      <form>
+      <label>
+        Ejemplo1:
+          <input
+             type='text'
+             name='Ejemplo4'
+             value={formData.Ejemplo4}
+             onChange={handleChange}
+          />
+        </label>
+        <div className='ButtonContainer'>
+          <button type='button' onClick={handleBack}>Atrás</button>
+          <button type='button' onClick={handleSubmit}>Enviar</button>
+        </div>
+      </form>
     </div>
   );
 };

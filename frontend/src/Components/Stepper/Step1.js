@@ -1,43 +1,125 @@
 import React from "react";
-import InputBox from "../InputBox/InputBox";
 
-const Step1 = ({onChange, data}) => {
-    const handleInputChange = (e) => {
-        const {name, value} = e.target;
-        onChange({[name]: value});
-    };
-
+const Step1 = ({formData, handleChange, handleNext}) => {
 
     return (
-        <div className='ContentForm'>
-            <h2>Datos Personales</h2>
-                <InputBox name='Nombre completo' type='Nombre' placeholder='Nombre Completo' />
-                    <div className='TresCampos'>
-                        <InputBox name='Genero' type='Genero' placeholder='Genero' />
-                        <InputBox name='Tipo de documento' type='TipoDocumento' placeholder='Tipo de documento' />
-                        <InputBox name='Numero de documento' type='Documento' placeholder='Documento' />
-                    </div>
-                    <div className='TresCampos'>
-                        <InputBox name='Lugar de expedicion' type='LugarExpedicion' placeholder='Lugar de expedicion' />
-                        <InputBox name='Fecha de nacimiento' type='FechaNacimiento' placeholder='Fecha de nacimiento' />
-                        <InputBox name='Nacionalidad' type='Nacionalidad' placeholder='Nacionalidad' />
-                    </div>
-                    <div className='TresCampos'>
-                        <InputBox name='Departamento' type='Departamento' placeholder='Departamento' />
-                        <InputBox name='Ciudad' type='Ciudad' placeholder='Ciudad' />
-                        <InputBox name='Direccion' type='Direccion' placeholder='Direccion' />
-                    </div>
-                    <div className='TresCampos'>
-                        <InputBox name='Telefono' type='Telefono' placeholder='Telefono' />
-                        <InputBox name='Contacto de emergencia' type='ContactoEmergencia' placeholder='Contacto de emergencia' />
-                        <InputBox name='Telefono de emergencia' type='TelefonoEmergencia' placeholder='Telefono de emergencia' />
-                    </div>
-                    <div className='TresCampos'>
-                        <InputBox name='Correo' type='Correo' placeholder='Correo' />
-                        <InputBox name='Contraseña' type='Contraseña' placeholder='Contraseña' />
-                        <InputBox name='Confirmar contraseña' type='ConfirmarContraseña' placeholder='Confirmar contraseña' />
-                    </div>
+        <div className="Step-Content">
+            <h2 className="TituloStep">Información Personal</h2>
+            <form>
+                <label>
+                    Nombre Completo:
+                    <input
+                        type='text'
+                        name='NombreCompleto'
+                        value={formData.NombreCompleto}
+                        onChange={handleChange}
+                    />
+                </label>
+                <div className='VariosCampos'>
+                    <label>
+                        Numero de documento:
+                        <input
+                            type='text'
+                            name='NumeroDocumento'
+                            value={formData.NumeroDocumento}
+                            onChange={handleChange}
+                        />
+                    </label>
+                    <label>
+                        Lugar de expedicion:
+                        <input
+                            type='text'
+                            name='LugarExpedicion'
+                            value={formData.LugarExpedicion}
+                            onChange={handleChange}
+                        />
+                    </label>
                 </div>
+                <div className='VariosCampos'>
+                    <label>
+                        Fecha de nacimiento:
+                        <input
+                            type='text'
+                            name='FechaNacimiento'
+                            value={formData.FechaNacimiento}
+                            onChange={handleChange}
+                        />
+                    </label>
+                    <label>
+                        Celular:
+                        <input
+                            type='text'
+                            name='Celular'
+                            value={formData.Celular}
+                            onChange={handleChange}
+                        />
+                    </label>
+                </div>
+                <div className='VariosCampos'>
+                    <label>
+                        Genero:
+                        <input
+                            type='text'
+                            name='Genero'
+                            value={formData.Genero}
+                            onChange={handleChange}
+                        />
+                    </label>
+                    <label>
+                        Nacionalidad:
+                        <input
+                            type='text'
+                            name='Nacionalidad'
+                            value={formData.Nacionalidad}
+                            onChange={handleChange}
+                        />
+                    </label>
+                </div>
+                <div className='VariosCampos'>
+                    <label>
+                        País de residencia:
+                        <input
+                            type='text'
+                            name='Pais'
+                            value={formData.Pais}
+                            onChange={handleChange}
+                        />
+                    </label>
+                    <label>
+                        Departamento:
+                        <input
+                            type='text'
+                            name='Departamento'
+                            value={formData.Departamento}
+                            onChange={handleChange}
+                        />
+                    </label>
+                </div>
+                <div className='VariosCampos'>
+                    <label>
+                        Direccion:
+                        <input
+                            type='text'
+                            name='Direccion'
+                            value={formData.Direccion}
+                            onChange={handleChange}
+                        />
+                    </label>
+                    <label>
+                        Ciudad:
+                        <input
+                            type='text'
+                            name='Ciudad'
+                            value={formData.Ciudad}
+                            onChange={handleChange}
+                        />
+                    </label>
+                </div>
+                <div className='ButtonContainer'>
+                    <button type='button' onClick={handleNext}>Siguiente</button>
+                </div>
+            </form>  
+        </div>
     );
 };
 

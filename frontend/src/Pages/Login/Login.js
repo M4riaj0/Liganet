@@ -64,6 +64,7 @@ const LoginForm = ({ handleLogin }) => {
             <button type="submit" className='button'>Ingresar</button>
           </form>
           <Link to='/SignUp' className='link'>Crear una cuenta</Link>
+          Registrarse como propietario
           {error && <p className="error-message">{error}</p>}
         </div>
       </div>
