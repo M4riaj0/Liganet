@@ -1,0 +1,48 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.navbar {
+  flex-shrink: 0;
+}
+
+.main-content {
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden; /* Evita el scroll en el contenedor principal */
+}
+
+.sidebar {
+  flex-shrink: 0;
+  width: 200px;
+  height: 100%;
+}
+
+.content {
+  flex-grow: 1;
+  background-color: #FFFFFF; /* Color de fondo para el contenido principal */
+  overflow-y: hidden; /* Permite el scroll solo en el contenido */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.home-sections, .search-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section {
+  background-color: #0d043124;
+  padding: 20px;
+  border-radius: 10px;
+  color: #FFFFFF;
+}
+
+.cards-container, .carousel {
+  display: flex;
+  gap: 20px;
+}

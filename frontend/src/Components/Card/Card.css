@@ -1,0 +1,18 @@
+.card {
+  background-color: #090126;
+  padding: 10px;
+  border-radius: 10px;
+  width: 200px;
+  flex: 0 0 200px; /* Asegura un ancho fijo */
+}
+
+.card-image {
+  background-color: #D1DFDE;
+  height: 160px;
+  border-radius: 10px;
+}
+
+.card-content {
+  padding: 10px;
+  color: #FFFFFF;
+}
