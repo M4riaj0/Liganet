@@ -16,26 +16,27 @@ h1 {
   font-family: Sora, sans-serif;/* Establece la fuente de un elemento */
   font-weight: 700;             /* Establece el grosor de la fuente de un elemento */
   line-height: 1.1;             /* Establece la altura de línea de un elemento */
-  margin: 40px 0;               /* Establece el margen el primer valor de forma vertical y el segundo en horizontal/
+  margin: 40px 0;               /* Establece el margen el primer valor de forma vertical y el segundo en horizontal*/
 }
 
-h2 {
-  font-size: 2rem;                /* Establece el tamaño de fuente de un elemento */
-  font-family: Sora, sans-serif;  /* Establece la fuente de un elemento */
-  font-weight: 700;               /* Establece el grosor de la fuente de un elemento */
-  line-height: 1.1;               /* Establece la altura de línea de un elemento */
-  margin: 40px 0;                 /* Establece el margen superior con valor de  */
-}
+/* h2 {
+  font-size: 2rem;              
+  font-family: Sora, sans-serif; 
+  font-weight: 700;               
+  line-height: 1.1;            
+  margin: 40px 0;         
+} */
+
 
 button {
-  flex: 1;                      /* Añadido para que los botones se estiren para ocupar el espacio disponible */
+  /* flex: 1;                      Añadido para que los botones se estiren para ocupar el espacio disponible */
   padding: 8px;
   background-color: #090126;
   color: #fff;
   cursor: pointer;
   border-radius: 8px;
-  margin: 0 10px;               /* Añadido para crear espacio entre los botones */
-  margin-bottom: 16px;
+  margin: 0 10px;
+  /* margin-bottom: 16px; */
 }
 
 button:first-child {
