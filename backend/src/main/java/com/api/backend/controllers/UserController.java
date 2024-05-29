@@ -8,6 +8,14 @@ import org.springframework.web.bind.annotation.*;
 import com.api.backend.models.UserModel;
 import com.api.backend.services.UserService;
 
+import com.api.backend.models.AddressModel;
+import com.api.backend.services.AddressService;
+
+import com.api.backend.models.PlayerModel;
+import com.api.backend.services.PlayerService;
+
+import com.api.backend.dto.CreateUserDTO;
+
 import java.util.ArrayList;
 import java.util.Optional;
 
@@ -18,6 +26,12 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private AddressService addressService;
+
+    @Autowired
+    private PlayerService playerService;
 
     @GetMapping
     public ArrayList<UserModel> getAllUsers() {
@@ -30,9 +44,14 @@ public class UserController {
     }
 
     @PostMapping
-    public ResponseEntity<?> createUser(@RequestBody UserModel user) {
+    public ResponseEntity<?> createUser(@RequestBody CreateUserDTO request) {
         try {
+            AddressModel address = request.getAddress(request);
+            AddressModel newAddress = this.addressService.createAddress(address);
+            UserModel user = request.getUser(request, newAddress.getIdDireccion());
             UserModel newUser = this.userService.createUser(user);
+            PlayerModel player = request.getPlayer(request, newUser.getIdUser());
+            this.playerService.createPlayer(player);
             return new ResponseEntity<>(newUser, HttpStatus.CREATED);
         } catch (Exception e) {
             e.printStackTrace(); // Imprime la excepción en la consola para su diagnóstico
