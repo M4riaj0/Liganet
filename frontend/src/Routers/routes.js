@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
 import Home from "../Pages/Home/Home";
+import Reserve from "../Pages/Reserve/Reserve";
 import { useState } from "react";
 
 export function MyRoutes() {
@@ -22,7 +23,10 @@ export function MyRoutes() {
                 {/* Ruta para el formulario de registro */}
                 <Route path="/SignUp" element={<SignUp />} />
                 {/* Ruta protegida para el Home */}
-                <Route path="/Home" element={isLoggedIn ? <Home /> : <Navigate to='/Home'/>}/>
+                <Route path="/Home" element={isLoggedIn ? <Home /> : <Navigate to='/Login'/>}/>
+                {/* Ruta protegida para Reservar */}
+                <Route path="/Reserve" element={isLoggedIn ? <Reserve /> : <Navigate to='/Login'/>}/>
+
             </Routes>
         </BrowserRouter>
     );

@@ -3,7 +3,7 @@ import { Navigate, Link } from 'react-router-dom';
 import './Login.css';
 import login from '../../Services/auth';
 import InputBox from '../../Components/InputBox/InputBox';
-import {FaUser, FaLock} from 'react-icons/fa';
+import {FaUser, FaLock } from 'react-icons/fa';
 
 
 const LoginForm = ({ handleLogin }) => {
@@ -59,7 +59,7 @@ const LoginForm = ({ handleLogin }) => {
               placeholder='Contraseña'
               value={formData.contraseña}
               onChange={handleChange}
-              // icon={<FaLock/>}
+              icon={<FaLock/>}
             />
             <button type="submit" className='button'>Ingresar</button>
           </form>
