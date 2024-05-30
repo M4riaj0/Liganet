@@ -2,6 +2,7 @@ import React from 'react';
 import './NavBar.css';
 import { FaSearch, FaPaperPlane, FaArrowRight } from 'react-icons/fa';
 import { IoSend } from "react-icons/io5";
+import { Link } from 'react-router-dom';
 
 const Navbar = ({ onSearchClick }) => {
   const handleSearchFocus = () => {
@@ -11,7 +12,9 @@ const Navbar = ({ onSearchClick }) => {
   return (
     <div className="navbar-container">
       <div className="app-name">
-        <h2>LIGANET</h2>
+        <Link to ="/Home">
+          <h2>LIGANET</h2>
+        </Link>
       </div>
       <div className="search-container">
         <FaSearch className="search-icon" />
