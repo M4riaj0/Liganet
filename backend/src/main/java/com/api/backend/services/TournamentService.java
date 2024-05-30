@@ -53,6 +53,7 @@ public class TournamentService {
             tournamentFound.get().setReglamento(request.getReglamento());
             tournamentFound.get().setIdEmpresa(request.getIdEmpresa());
             tournamentFound.get().setIdReglamento(request.getIdReglamento());
+            tournamentFound.get().setFotoUrl(request.getFotoUrl());
         }
         return tournamentFound;
     }
