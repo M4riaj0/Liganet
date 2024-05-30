@@ -11,7 +11,7 @@ const Step1 = ({formData, handleChange, handleNext}) => {
                     <input
                         type='text'
                         name='NombreCompleto'
-                        value={formData.NombreCompleto}
+                        value={formData.nombreCompleto}
                         onChange={handleChange}
                     />
                 </label>
@@ -19,9 +19,8 @@ const Step1 = ({formData, handleChange, handleNext}) => {
                     <label>
                         Numero de documento:
                         <input
-                            type='number'
                             name='NumeroDocumento'
-                            value={formData.NumeroDocumento}
+                            value={formData.cedula}
                             onChange={handleChange}
                         />
                     </label>

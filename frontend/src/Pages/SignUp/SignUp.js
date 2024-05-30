@@ -1,5 +1,6 @@
 import React from 'react';
 import './SignUp.css';
+import register from '../../Services/register';
 import Stepper from '../../Components/Stepper/Stepper'
 import Step1 from '../../Components/Stepper/Step1'
 import Step2 from '../../Components/Stepper/Step2'
@@ -14,7 +15,13 @@ function SignUp() {
 
     const handleSubmit = (formData) => {
         console.log('Form submitted with data:',formData);
-        //Enviar el formulario al endpoint de la API
+        register(formData)
+        .then(() => {
+            console.log('Usuario registrado correctamente');
+        })
+        .catch((error) => {
+            console.error('Error al registrar usuario:', error);
+        });
     }
 
     return (
