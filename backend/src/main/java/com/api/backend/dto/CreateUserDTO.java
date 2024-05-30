@@ -4,6 +4,7 @@ import com.api.backend.models.UserModel;
 import com.api.backend.models.AddressModel;
 import com.api.backend.models.PlayerModel;
 
+
 public class CreateUserDTO {
 
     private String nombreCompleto;
@@ -216,6 +217,8 @@ public class CreateUserDTO {
         this.contraseña = contraseña;
     }
 
+    // Métodos para obtener modelos a partir del DTO
+
     public UserModel getUser(CreateUserDTO request, Long idDireccion){
         UserModel user = new UserModel();
         if(request != null){
@@ -262,4 +265,43 @@ public class CreateUserDTO {
         return player;
     }
 
+    // Métodos para establecer el DTO a partir de los modelos
+
+    public void setUser(UserModel user) {
+        if (user != null) {
+            this.setNombreCompleto(user.getNombreCompleto());
+            this.setNombreUsuario(user.getNombreUsuario());
+            this.setCorreo(user.getCorreo());
+            this.setCelular(user.getCelular());
+            this.setCedula(user.getCedula());
+            this.setLugarExpedicion(user.getLugarExpedicion());
+            this.setFechaNacimiento(user.getFechaNacimiento());
+            this.setGenero(user.getGenero());
+            this.setNacionalidad(user.getNacionalidad());
+            this.setContraseña(user.getContraseña());
+        }
+    }
+
+    public void setAddress(AddressModel address) {
+        if (address != null) {
+            this.setDireccion(address.getDireccion());
+            this.setCiudad(address.getCiudad());
+            this.setDepartamento(address.getDepartamento());
+            this.setPais(address.getPais());
+        }
+    }
+
+    public void setPlayer(PlayerModel player) {
+        if (player != null) {
+            this.setAltura(player.getAltura());
+            this.setAñosExperiencia(player.getAñosExperiencia());
+            this.setNivelCompetencia(player.getNivelCompetencia());
+            this.setNumeroEquipacion(player.getNumeroEquipacion());
+            this.setPerfilDominante(player.getPerfilDominante());
+            this.setPeso(player.getPeso());
+            this.setPiernaDominante(player.getPiernaDominante());
+            this.setPosicionPrincipal(player.getPosicionPrincipal());
+            this.setPosicionSecundaria(player.getPosicionSecundaria());
+        }
+    }
 }

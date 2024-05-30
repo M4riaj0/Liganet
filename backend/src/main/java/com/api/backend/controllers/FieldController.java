@@ -24,7 +24,7 @@ public class FieldController {
     }
 
     @GetMapping("/name/{name}")
-    public Optional<FieldModel> getFieldByName(@PathVariable("name") String name) {
+    public ArrayList<FieldModel> getFieldByName(@PathVariable("name") String name) {
         return this.fieldService.getFieldByName(name);
     }
 

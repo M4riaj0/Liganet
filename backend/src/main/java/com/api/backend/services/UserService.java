@@ -27,6 +27,10 @@ public class UserService {
         return userRepository.findByNombreUsuario(nombreUsuario);
     }
 
+    public ArrayList<UserModel> getUsersByName(String name){
+        return userRepository.findByNombreCompletoContaining(name);
+    }
+
     public Optional<UserModel> getUserById(Long id) {
         return Optional.ofNullable(userRepository.findById(id).get());        
         // return userRepository.findById(id);

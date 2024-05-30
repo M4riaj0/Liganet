@@ -25,6 +25,11 @@ public class BookingController {
         return this.bookingService.getAllBookings();
     }
 
+    @GetMapping("/user/{id}")
+    public ArrayList<BookingModel> getBookingsByUser(@PathVariable("id") Long id) {
+        return this.bookingService.getBookingsByUser(id);
+    }
+
     @GetMapping("/{id}")
     public Optional<BookingModel> getBookingById(@PathVariable("id") Long id) {
         return this.bookingService.getBookingById(id);
