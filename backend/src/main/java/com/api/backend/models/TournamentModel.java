@@ -46,13 +46,16 @@ public class TournamentModel {
     private Float precioPremiacion;
 
     @Column(name = "reglamento")
-    private Long reglamento;
+    private String reglamento;
 
     @Column(name = "id_empresa")
     private Float idEmpresa;
 
     @Column(name = "id_reglamento")
     private Float idReglamento;
+
+    @Column(name = "foto_url")
+    private String fotoUrl;
 
     public Long getIdTorneo() {
         return idTorneo;
@@ -142,12 +145,20 @@ public class TournamentModel {
         this.precioPremiacion = precioPremiacion;
     }
 
-    public Long getReglamento() {
+    public String getReglamento() {
         return reglamento;
     }
 
-    public void setReglamento(Long reglamento) {
+    public void setReglamento(String reglamento) {
         this.reglamento = reglamento;
+    }
+
+    public String getFotoUrl() {
+        return fotoUrl;
+    }
+
+    public void setFotoUrl(String fotoUrl) {
+        this.fotoUrl = fotoUrl;
     }
 
     public Float getIdEmpresa() {
