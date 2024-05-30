@@ -1,10 +1,20 @@
 import React from 'react';
 import './NavBar.css';
 import { FaSearch, FaPaperPlane, FaArrowRight } from 'react-icons/fa';
+import { IoMdExit } from "react-icons/io";
 import { IoSend } from "react-icons/io5";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+
 
 const Navbar = ({ onSearchClick }) => {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem('user');
+    console.log('Sesión cerrada');
+    navigate ('/Login');
+  };
+  
   const handleSearchFocus = () => {
     onSearchClick();
   };
@@ -23,7 +33,10 @@ const Navbar = ({ onSearchClick }) => {
           <IoSend />
         </button>
       </div>
-      <img className="profile-image" src="https://cdn.pixabay.com/photo/2021/05/10/14/15/corset-6243486_1280.jpg" alt="Perfil" />
+      <div className='right-icons'>
+        <img className="profile-image" src="https://cdn.pixabay.com/photo/2021/05/10/14/15/corset-6243486_1280.jpg" alt="Perfil" />
+        <IoMdExit className="exit-icon" onClick={handleLogout}/>
+      </div>
     </div>
   );
 };

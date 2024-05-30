@@ -1,0 +1,22 @@
+.ReserveCard {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 8px 4px;
+    width: 16rem;
+}
+
+.ReserveCard-content {
+    flex: 1;
+}
+
+.ReserveCard-content h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.ReserveCard-content p {
+    margin: 5px 0;
+}
