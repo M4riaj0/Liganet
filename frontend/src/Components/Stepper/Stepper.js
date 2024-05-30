@@ -6,13 +6,16 @@ import Step3 from './Step3';
 
 const Stepper = ({steps, onSubmit}) => {
     const [currentStep, setCurrentStep] = useState(0);
+    const [isEditingFoto, setIsEditingFoto] = useState(true);
+    const [isEditingFotoPerfil, setIsEditingFotoPerfil] = useState(true);
+
     const [formData, setFormData] = useState({
         //Inicializar los datos del formulario
         nombre_completo: '',
-        Cedula: '',
+        cedula: '',
         lugar_expedicion: '',
         fecha_nacimiento: '',
-        celular: '',
+        celular: 0,
         genero: '',
         nacionalidad: '',
         pais: '',
@@ -30,7 +33,9 @@ const Stepper = ({steps, onSubmit}) => {
         posicion_secundaria: '',
         nombre_usuario: '',
         correo: '',
-        contraseña: '' 
+        contraseña: '',
+        fotoPerfil: '',
+        fotoUrl: ''
     });
 
     const handleNext = () => {
@@ -55,6 +60,22 @@ const Stepper = ({steps, onSubmit}) => {
         console.log('Datos del formulario:', formData);
     };
 
+    const handleFotoPerfilUpload = (url) => {
+        setFormData((prevData) => ({
+          ...prevData,
+          fotoPerfil: url
+        }));
+        setIsEditingFotoPerfil(false);
+      };
+      
+      const handleFotoUrlUpload = (url) => {
+        setFormData((prevData) => ({
+          ...prevData,
+          fotoUrl: url
+        }));
+        setIsEditingFoto(false);
+      };
+
 
     return (
         <div className="Step-Content">
@@ -62,10 +83,10 @@ const Stepper = ({steps, onSubmit}) => {
                 <Step1 formData={formData} handleChange={handleChange} handleNext={handleNext} />
             )}
             { currentStep === 1 && (
-                <Step2 formData={formData} handleChange={handleChange} handleNext={handleNext} handleBack={handleBack} />
+                <Step2 formData={formData} handleChange={handleChange} handleNext={handleNext} handleBack={handleBack} handleFotoUrlUpload={handleFotoUrlUpload} isEditingFoto={isEditingFoto}  setIsEditingFoto={setIsEditingFoto}/>
             )}
             { currentStep === 2 && (
-                <Step3 formData={formData} handleChange={handleChange} handleBack={handleBack} handleSubmit={handleSubmit} />
+                <Step3 formData={formData} handleChange={handleChange} handleBack={handleBack} handleSubmit={onSubmit} handleFotoPerfilUpload={handleFotoPerfilUpload }   isEditingFotoPerfil={isEditingFotoPerfil} setIsEditingFotoPerfil={setIsEditingFotoPerfil} />
             )}
         </div>
     );

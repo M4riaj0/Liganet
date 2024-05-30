@@ -57,7 +57,7 @@ const LoginForm = ({ handleLogin }) => {
       
       <div className="login-right-section">
         <div className='login-ContentForm'>  
-        <h1>Upload to Cloudinary</h1>
+          <label>Upload a file to Cloudinary</label>
           <UploadFiles onUpload={handleUpload} />
           {uploadedUrl && (
             <p>

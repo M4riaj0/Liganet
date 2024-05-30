@@ -13,6 +13,67 @@
     justify-content: space-between;
 }
 
+.foto-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.foto-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+
+.foto-perfil {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: contain; /* Cambiar a 'contain' para mostrar toda la imagen */
+    background-color: #D1DFDE; /* Agregar fondo de color */
+    display: flex; /* Agregar flexbox para centrar verticalmente */
+    justify-content: center; /* Centrar verticalmente */
+    align-items: center; /* Centrar verticalmente */
+}
+
+.foto-placeholder {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #090126;
+    color: #888;
+    text-align: center;
+    padding: 10px;
+    background-color: #D1DFDE; /* Cambiar el fondo de color */
+}
+
+.edit-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: #090126; /* Color de fondo original */
+    border: none;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+}
+
+.edit-button:hover {
+    background: #450461; /* Nuevo color de fondo al pasar el cursor */
+}
+
+
+.upload-section {
+    margin-top: 10px;
+}
+
 .VariosCampos {
     display: flex;
     justify-content: space-between;

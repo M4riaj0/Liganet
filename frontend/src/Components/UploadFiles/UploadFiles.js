@@ -35,12 +35,12 @@ const UploadFiles = ({ onUpload }) => {
   return (
     <div className="upload-files">
       <input type="file" onChange={handleFileChange} />
-      <button onClick={handleUpload}>Upload</button>
-      {fileUrl && (
+      <button type="button" onClick={handleUpload}>Añadir</button>
+      {/* {fileUrl && (
         <p>
           File uploaded: <a href={fileUrl} target="_blank" rel="noopener noreferrer">{fileUrl}</a>
         </p>
-      )}
+      )} */}
     </div>
   );
 };
