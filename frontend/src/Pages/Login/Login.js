@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Navigate, Link } from 'react-router-dom';
 import './Login.css';
 import login from '../../Services/auth';
@@ -10,6 +10,13 @@ const LoginForm = ({ handleLogin }) => {
   const [formData, setFormData] = useState({ usuario: '', contraseña: '' });
   const [error, setError] = useState('');
   const [loggedIn, setLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem('user'));
+    if (user) {
+      setLoggedIn(true);
+    }
+  }, []);
 
   const handleSubmit = async (event) => {
     event.preventDefault();

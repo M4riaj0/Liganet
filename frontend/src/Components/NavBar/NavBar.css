@@ -30,6 +30,7 @@
 
 .search-icon {
   position: absolute;
+  top: 15px;
   left: 10px; /* Posiciona el icono a la izquierda */
   color: #0D0431; /* Cambia el color del icono */
 
@@ -37,12 +38,14 @@
 
 .search-button {
   position: absolute;
+  top: 8px;
   background-color: white;
   border: none;
   border-radius: 0 20px 20px 0;
   color: #0D0431;
   cursor: pointer;
-  padding: 7px 16px;
+  padding: 9px 16px;
+  padding-top: 10px;
   right: 0px; /* Posiciona el icono a la izquierda */
 }
 
@@ -55,4 +58,16 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
+}
+
+.exit-icon {
+  cursor: pointer;
+  color: white;
+  font-size: 48px;
+  padding-top: 8px;
+}
+
+.rigth-icons {
+  display: flex;
+  gap: 20px;
 }
