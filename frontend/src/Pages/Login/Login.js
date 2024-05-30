@@ -4,12 +4,14 @@ import './Login.css';
 import login from '../../Services/auth';
 import InputBox from '../../Components/InputBox/InputBox';
 import {FaUser, FaLock } from 'react-icons/fa';
+import UploadFiles from '../../Components/UploadFiles/UploadFiles';
 
 
 const LoginForm = ({ handleLogin }) => {
   const [formData, setFormData] = useState({ usuario: '', contraseña: '' });
   const [error, setError] = useState('');
   const [loggedIn, setLoggedIn] = useState(false);
+  const [uploadedUrl, setUploadedUrl] = useState('');
 
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem('user'));
@@ -42,6 +44,11 @@ const LoginForm = ({ handleLogin }) => {
     return <Navigate to='/Home' />;
   }
 
+  const handleUpload = (url) => {
+    setUploadedUrl(url);
+    console.log('Uploaded file URL:', url);
+  };
+
   return (
     <div className="login">
       
@@ -50,6 +57,13 @@ const LoginForm = ({ handleLogin }) => {
       
       <div className="login-right-section">
         <div className='login-ContentForm'>  
+        <h1>Upload to Cloudinary</h1>
+          <UploadFiles onUpload={handleUpload} />
+          {uploadedUrl && (
+            <p>
+              Uploaded File URL: <a href={uploadedUrl} target="_blank" rel="noopener noreferrer">{uploadedUrl}</a>
+            </p>
+          )}
           <h2>LIGANET</h2>
           <form onSubmit={handleSubmit} className='Formulario'>
             <InputBox

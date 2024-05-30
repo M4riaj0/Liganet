@@ -34,7 +34,7 @@ const Navbar = ({ onSearchClick }) => {
         </button>
       </div>
       <div className='right-icons'>
-        <img className="profile-image" src="https://cdn.pixabay.com/photo/2021/05/10/14/15/corset-6243486_1280.jpg" alt="Perfil" />
+        <img className="profile-image" src="https://res.cloudinary.com/dmmnud7ix/image/upload/v1717051319/inyfu0ynjvbao60ktlfb.jpg" alt="Perfil" />
         <IoMdExit className="exit-icon" onClick={handleLogout}/>
       </div>
     </div>
