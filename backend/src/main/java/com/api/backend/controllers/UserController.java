@@ -46,12 +46,7 @@ public class UserController {
     @GetMapping("/name/{name}")
     public ArrayList<CreateUserDTO> getUsersByName(@PathVariable("name") String name) {
         ArrayList<CreateUserDTO> responseList = new ArrayList<>();
-        System.out.println("   ");
-        System.out.println("   ");
         ArrayList<UserModel> users = this.userService.getUsersByName(name);
-        System.out.println(name);
-        System.out.println("   ");
-        System.out.println("   ");
         for (UserModel user : users) {
             CreateUserDTO responseItem = new CreateUserDTO();
             responseItem.setUser(user);
