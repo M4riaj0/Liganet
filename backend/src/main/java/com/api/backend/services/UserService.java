@@ -55,6 +55,7 @@ public class UserService {
             userFound.get().setNacionalidad(request.getNacionalidad());
             userFound.get().setContraseña(request.getContraseña());
             userFound.get().setIdDireccion(request.getIdDireccion());
+            userFound.get().setFotoPerfil(request.getFotoPerfil());
             userRepository.save(userFound.get());
         }
         return userFound;

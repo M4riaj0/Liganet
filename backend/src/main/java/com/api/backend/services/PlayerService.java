@@ -44,6 +44,7 @@ public class PlayerService {
             player.setPiernaDominante(request.getPiernaDominante());
             player.setPosicionPrincipal(request.getPosicionPrincipal());
             player.setPosicionSecundaria(request.getPosicionSecundaria());
+            player.setFotoUrl(request.getFotoUrl());
             playerRepository.save(player);
         }
         return playerFound;

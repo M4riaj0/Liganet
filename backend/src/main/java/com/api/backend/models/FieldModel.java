@@ -30,6 +30,9 @@ public class FieldModel {
     @Column(name = "id_empresa")
     private Long idEmpresa;
 
+    @Column(name = "foto_url")
+    private String fotoUrl;
+
     public Long getIdField() {
         return idCancha;
     }
@@ -77,6 +80,14 @@ public class FieldModel {
 
     public void setIdEmpresa(Long idEmpresa) {
         this.idEmpresa = idEmpresa;
+    }
+
+    public String getFotoUrl() {
+        return fotoUrl;
+    }
+
+    public void setFotoUrl(String fotoUrl) {
+        this.fotoUrl = fotoUrl;
     }
 
 

@@ -80,7 +80,6 @@ const LoginForm = ({ handleLogin }) => {
               placeholder='Contraseña'
               value={formData.contraseña}
               onChange={handleChange}
-              icon={<FaLock/>}
             />
             <button type="submit" className='button'>Ingresar</button>
           </form>

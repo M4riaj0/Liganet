@@ -15,9 +15,9 @@
   border: none;
   border-radius: 20px;
   cursor: pointer;
-  display: flex;
   justify-content: center;
   align-items: center;
+  flex: none;
 }
 
 .chip:hover, .chip-reset:hover {

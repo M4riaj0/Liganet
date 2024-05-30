@@ -30,6 +30,8 @@ public class CreateUserDTO {
     private String nombreUsuario;
     private String correo;
     private String contraseña;
+    private String fotoUrl;
+    private String fotoPerfil;
 
     // Getters y Setters
 
@@ -217,6 +219,22 @@ public class CreateUserDTO {
         this.contraseña = contraseña;
     }
 
+    public String getFotoUrl() {
+        return fotoUrl;
+    }
+
+    public void setFotoUrl(String fotoUrl) {
+        this.fotoUrl = fotoUrl;
+    }
+
+    public String getFotoPerfil() {
+        return fotoPerfil;
+    }
+
+    public void setFotoPerfil(String fotoPerfil) {
+        this.fotoPerfil = fotoPerfil;
+    }
+
     // Métodos para obtener modelos a partir del DTO
 
     public UserModel getUser(CreateUserDTO request, Long idDireccion){
@@ -233,6 +251,7 @@ public class CreateUserDTO {
             user.setNacionalidad(request.getNacionalidad());
             user.setContraseña(request.getContraseña());
             user.setIdDireccion(idDireccion);
+            user.setFotoPerfil(request.getFotoPerfil());
         }
         return user;
     }
@@ -261,6 +280,7 @@ public class CreateUserDTO {
             player.setPiernaDominante(request.getPiernaDominante());
             player.setPosicionPrincipal(request.getPosicionPrincipal());
             player.setPosicionSecundaria(request.getPosicionSecundaria());
+            player.setFotoUrl(request.getFotoUrl());
         }
         return player;
     }
@@ -302,6 +322,7 @@ public class CreateUserDTO {
             this.setPiernaDominante(player.getPiernaDominante());
             this.setPosicionPrincipal(player.getPosicionPrincipal());
             this.setPosicionSecundaria(player.getPosicionSecundaria());
+            this.setFotoUrl(player.getFotoUrl());
         }
     }
 }

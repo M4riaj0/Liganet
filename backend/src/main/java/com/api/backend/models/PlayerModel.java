@@ -65,6 +65,9 @@ public class PlayerModel {
     @Column(name = "posicion_secundaria")
     private String posicionSecundaria;
 
+    @Column(name = "foto_url")
+    private String fotoUrl;
+
     // Getters y setters
     public Long getIdJugador() {
         return idJugador;
@@ -168,5 +171,13 @@ public class PlayerModel {
 
     public void setPosicionSecundaria(String posicionSecundaria) {
         this.posicionSecundaria = posicionSecundaria;
+    }
+
+    public String getFotoUrl() {
+        return fotoUrl;
+    }
+
+    public void setFotoUrl(String fotoUrl) {
+        this.fotoUrl = fotoUrl;
     }
 }

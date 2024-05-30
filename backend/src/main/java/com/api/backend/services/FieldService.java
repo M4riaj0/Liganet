@@ -42,6 +42,7 @@ public class FieldService {
             fieldFound.get().setCantidadJugadores(request.getCantidadJugadores());
             fieldFound.get().setHabilitada(request.isHabilitada());
             fieldFound.get().setIdEmpresa(request.getIdEmpresa());
+            fieldFound.get().setFotoUrl(request.getFotoUrl());
             fieldRepository.save(fieldFound.get());
         }
         return fieldFound;

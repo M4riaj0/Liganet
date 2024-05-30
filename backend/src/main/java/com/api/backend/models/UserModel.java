@@ -48,6 +48,9 @@ public class UserModel {
     @Column(name = "id_direccion")
     private Long idDireccion;
 
+    @Column(name = "foto_perfil")
+    private String fotoPerfil;
+
     public Long getIdUser() {
         return idPersona;
     }
@@ -145,6 +148,14 @@ public class UserModel {
 
     public void setIdDireccion(Long idDireccion) {
         this.idDireccion = idDireccion;
+    }
+
+    public String getFotoPerfil() {
+        return fotoPerfil;
+    }
+
+    public void setFotoPerfil(String fotoPerfil) {
+        this.fotoPerfil = fotoPerfil;
     }
 
 
