@@ -7,6 +7,7 @@ import com.api.backend.models.PlayerModel;
 
 public class CreateUserDTO {
 
+    private Long id;
     private String nombreCompleto;
     private String cedula;
     private String lugarExpedicion;
@@ -34,6 +35,14 @@ public class CreateUserDTO {
     private String fotoPerfil;
 
     // Getters y Setters
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getNombreCompleto() {
         return nombreCompleto;
@@ -289,6 +298,7 @@ public class CreateUserDTO {
 
     public void setUser(UserModel user) {
         if (user != null) {
+            this.setId(user.getIdUser());
             this.setNombreCompleto(user.getNombreCompleto());
             this.setNombreUsuario(user.getNombreUsuario());
             this.setCorreo(user.getCorreo());
@@ -299,6 +309,7 @@ public class CreateUserDTO {
             this.setGenero(user.getGenero());
             this.setNacionalidad(user.getNacionalidad());
             this.setContraseña(user.getContraseña());
+            this.setFotoPerfil(user.getFotoPerfil());
         }
     }
 
