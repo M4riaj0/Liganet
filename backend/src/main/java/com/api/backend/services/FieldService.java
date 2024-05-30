@@ -21,8 +21,8 @@ public class FieldService {
         return fieldRepository.save(field);
     }
 
-    public Optional<FieldModel> getFieldByName(String name) {
-        return fieldRepository.findByNombre(name);
+    public ArrayList<FieldModel> getFieldByName(String name) {
+        return fieldRepository.findByNombreContaining(name);
     }
 
     public Optional<FieldModel> getFieldById(Long id) {

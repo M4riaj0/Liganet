@@ -28,6 +28,10 @@ public class TournamentService {
         // return tournamentRepository.findById(id);
     }
 
+    public ArrayList<TournamentModel> getTournamentByName(String nombreTorneo) {
+        return (ArrayList<TournamentModel>) tournamentRepository.findByNombreTorneoContaining(nombreTorneo); // en JPA se usa findAll() para obtener todos los registros
+    }
+
     /**
      * @param id
      * @param request

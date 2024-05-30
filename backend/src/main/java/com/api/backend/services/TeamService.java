@@ -27,6 +27,10 @@ public class TeamService {
         return equipoRepository.findById(id);
     }
 
+    public ArrayList<TeamModel> getTeamByName(String name) {
+        return (ArrayList<TeamModel>) equipoRepository.findByNombreEquipoContaining(name); // en JPA se usa findAll() para obtener todos los registros
+    }
+
     public Optional<TeamModel> updateTeam(Long id, TeamModel request) {
         Optional<TeamModel> equipoFound = equipoRepository.findById(id);
         if (equipoFound.isPresent()) {

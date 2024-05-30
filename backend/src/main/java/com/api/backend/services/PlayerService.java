@@ -27,6 +27,10 @@ public class PlayerService {
         return playerRepository.findById(id);
     }
 
+    public Optional<PlayerModel> getPlayerByUser(Long idUser) {
+        return (Optional<PlayerModel>) playerRepository.findByIdPersona(idUser); // en JPA se usa findAll() para obtener todos los registros
+    }
+
     public Optional<PlayerModel> updatePlayer(Long id, PlayerModel request) {
         Optional<PlayerModel> playerFound = playerRepository.findById(id);
         if (playerFound.isPresent()) {
