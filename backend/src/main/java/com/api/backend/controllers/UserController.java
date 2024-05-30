@@ -43,6 +43,31 @@ public class UserController {
         return this.userService.getUserById(id);
     }
 
+    @GetMapping("/name/{name}")
+    public ArrayList<CreateUserDTO> getUsersByName(@PathVariable("name") String name) {
+        ArrayList<CreateUserDTO> responseList = new ArrayList<>();
+        System.out.println("   ");
+        System.out.println("   ");
+        ArrayList<UserModel> users = this.userService.getUsersByName(name);
+        System.out.println(name);
+        System.out.println("   ");
+        System.out.println("   ");
+        for (UserModel user : users) {
+            CreateUserDTO responseItem = new CreateUserDTO();
+            responseItem.setUser(user);
+            Optional<PlayerModel> playerOptional = this.playerService.getPlayerByUser(user.getIdUser());
+            PlayerModel player = playerOptional.orElse(null);
+            responseItem.setPlayer(player);
+            if(user.getIdDireccion() != null){
+                Optional<AddressModel> addressOptional = this.addressService.getAddressById(user.getIdDireccion());
+                AddressModel address = addressOptional.orElse(null);
+                responseItem.setAddress(address);
+            }
+            responseList.add(responseItem);
+        }
+        return responseList;
+    }
+
     @PostMapping
     public ResponseEntity<?> createUser(@RequestBody CreateUserDTO request) {
         try {

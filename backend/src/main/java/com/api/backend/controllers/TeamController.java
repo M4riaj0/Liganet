@@ -30,6 +30,12 @@ public class TeamController {
         return this.teamService.getTeamById(id);
     }
 
+    @GetMapping("/name/{name}")
+    public ArrayList<TeamModel> getTeamByName(@PathVariable("name") String name) {
+        return this.teamService.getTeamByName(name);
+    }
+
+
     @PostMapping
     public ResponseEntity<?> createTeam(@RequestBody TeamModel team) {
         try {

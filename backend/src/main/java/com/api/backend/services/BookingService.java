@@ -19,6 +19,10 @@ public class BookingService {
         return (ArrayList<BookingModel>) bookingRepository.findAll(); // JPA usa findAll() para obtener todos los registros
     }
 
+    public ArrayList<BookingModel> getBookingsByUser(Long idPersona) {
+        return (ArrayList<BookingModel>) bookingRepository.findByIdPersona(idPersona); 
+    }
+
     public BookingModel createBooking(BookingModel booking) {
         return bookingRepository.save(booking); // JPA usa save() para guardar un registro
     }

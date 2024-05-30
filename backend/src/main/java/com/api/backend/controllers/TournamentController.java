@@ -1,6 +1,8 @@
 package com.api.backend.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import com.api.backend.models.TournamentModel;
@@ -27,9 +29,20 @@ public class TournamentController {
         return this.tournamentService.getTournamentById(id);
     }
 
+    @GetMapping("/name/{name}")
+    public ArrayList<TournamentModel> getTournamentByName(@PathVariable("name") String name) {
+        return this.tournamentService.getTournamentByName(name);
+    }
+
     @PostMapping
-    public TournamentModel createTournament(@RequestBody TournamentModel tournament) {
-        return this.tournamentService.createTournament(tournament);
+    public ResponseEntity<?> createTournament(@RequestBody TournamentModel tournament) {
+        try{
+            TournamentModel newTournament = this.tournamentService.createTournament(tournament);
+            return new ResponseEntity<>(newTournament, HttpStatus.CREATED);
+        } catch (Exception e) {
+            e.printStackTrace(); // Imprime la excepción en la consola para su diagnóstico
+            return new ResponseEntity<>("Error al crear torneo", HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
     @PutMapping("/{id}")
