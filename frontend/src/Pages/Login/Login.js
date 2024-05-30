@@ -4,7 +4,6 @@ import './Login.css';
 import login from '../../Services/auth';
 import InputBox from '../../Components/InputBox/InputBox';
 import {FaUser, FaLock } from 'react-icons/fa';
-import UploadFiles from '../../Components/UploadFiles/UploadFiles';
 
 
 const LoginForm = ({ handleLogin }) => {
@@ -57,13 +56,6 @@ const LoginForm = ({ handleLogin }) => {
       
       <div className="login-right-section">
         <div className='login-ContentForm'>  
-          <label>Upload a file to Cloudinary</label>
-          <UploadFiles onUpload={handleUpload} />
-          {uploadedUrl && (
-            <p>
-              Uploaded File URL: <a href={uploadedUrl} target="_blank" rel="noopener noreferrer">{uploadedUrl}</a>
-            </p>
-          )}
           <h2>LIGANET</h2>
           <form onSubmit={handleSubmit} className='Formulario'>
             <InputBox
