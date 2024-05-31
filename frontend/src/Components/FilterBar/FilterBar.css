@@ -9,8 +9,8 @@
 }
 
 .chip, .chip-reset {
-  background-color: #0d043124;
-  color: #0d0431f3;
+  background-color: #090126;
+  color: #FFFFFF;
   padding: 10px 20px;
   border: none;
   border-radius: 20px;
@@ -21,8 +21,8 @@
 }
 
 .chip:hover, .chip-reset:hover {
-  background-color: #d1d8df;
-  color: #0d0431f3;
+  background-color: #0d0431f3;
+  color: #FFFFFF;
 }
 
 .chip-reset {
