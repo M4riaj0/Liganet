@@ -106,7 +106,7 @@ const Home = () => {
         <SideBar onHomeClick={handleHomeClick} />
         {view === 'home' ? (
           <div className="content">
-            <HomeView />
+            <HomeView jugadores={jugadores} torneos={torneos} />
           </div>
         ) : (
           <div className="content">

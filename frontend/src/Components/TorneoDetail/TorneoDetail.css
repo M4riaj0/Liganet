@@ -1,0 +1,67 @@
+.torneo-detail-container {
+    display: flex;
+    align-items: flex-start;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin-top: 20px;
+  }
+  
+  .torneo-detail-image-container {
+    flex-shrink: 0;
+    margin-right: 20px;
+  }
+  
+  .torneo-detail-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .torneo-detail-info {
+    flex-grow: 1;
+  }
+  
+  .torneo-detail-info h2 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #333;
+  }
+  
+  .torneo-detail-info p {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #666;
+  }
+  
+  .torneo-detail-info strong {
+    color: #000;
+  }
+  
+  .torneo-description {
+    width: 100%;
+    height: 100px;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: none;
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 1em;
+  }
+  
+  .torneo-reglamento-link {
+    color: #1e90ff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .torneo-reglamento-link:hover {
+    text-decoration: underline;
+  }
+  

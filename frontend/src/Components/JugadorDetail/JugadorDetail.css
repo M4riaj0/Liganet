@@ -1,0 +1,51 @@
+.jugador-detail-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.2s ease-in-out;
+}
+
+.jugador-detail-container:hover {
+  transform: translateY(-5px);
+}
+
+.jugador-detail-image-container {
+  width: 200px; /* Aumenta el tamaño del contenedor de la imagen */
+  height: 200px; /* Aumenta el tamaño del contenedor de la imagen */
+  overflow: hidden;
+  border-radius: 8px;
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+
+.jugador-detail-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Cambiado a 'contain' para asegurar que la imagen se ajuste dentro del contenedor */
+  border-radius: 8px;
+}
+
+.jugador-detail-info {
+  flex-grow: 1;
+}
+
+.jugador-detail-info h2 {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.jugador-detail-info p {
+  margin: 5px 0;
+  font-size: 1em;
+  color: #666;
+}
+
+.jugador-detail-info strong {
+  color: #000;
+}

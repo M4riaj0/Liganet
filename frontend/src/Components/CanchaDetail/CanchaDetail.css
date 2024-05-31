@@ -1,0 +1,45 @@
+.cancha-detail-container {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cancha-detail-image-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .cancha-detail-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .cancha-detail-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .cancha-detail-info {
+    padding: 20px;
+  }
+  
+  .cancha-detail-info p {
+    margin: 10px 0;
+    font-size: 1em;
+    color: #333;
+  }
+  
+  .cancha-detail-info strong {
+    color: #000;
+  }
+  
