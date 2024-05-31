@@ -3,6 +3,7 @@ import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
 import Home from "../Pages/Home/Home";
 import Reserve from "../Pages/Reserve/Reserve";
+import Cloudinary from "../Pages/Cloudinary/Cloudinary";
 import { useState, useEffect } from "react";
 
 export function MyRoutes() {
@@ -34,6 +35,9 @@ export function MyRoutes() {
                 <Route path="/Home" element={isLoggedIn ? <Home /> : <Navigate to='/Login'/>}/>
                 {/* Ruta protegida para Reservar */}
                 <Route path="/Reserve" element={isLoggedIn ? <Reserve /> : <Navigate to='/Login'/>}/>
+                {/* Ruta para el cloudinary */}
+                <Route path="/cloudinary" element={<Cloudinary />} />
+
 
             </Routes>
         </BrowserRouter>
