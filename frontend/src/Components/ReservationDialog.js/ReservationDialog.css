@@ -1,0 +1,32 @@
+/* ReservationDialog.css */
+
+.Modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.Modal h2 {
+  margin-top: 0;
+}
+
+.Modal form {
+  display: flex;
+  flex-direction: column;
+}
+
+.Modal label {
+  margin-bottom: 10px;
+}
+
+.Modal button {
+  margin-top: 10px;
+}
