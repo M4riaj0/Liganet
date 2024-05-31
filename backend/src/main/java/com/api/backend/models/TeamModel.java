@@ -26,6 +26,17 @@ public class TeamModel {
     @Column(name = "cantidad_miembros")
     private int cantidadMiembros;
 
+    @Column(name = "foto_url")
+    private String fotoUrl;
+
+    public String getFotoUrl() {
+        return fotoUrl;
+    }
+
+    public void setFotoUrl(String fotoUrl) {
+        this.fotoUrl = fotoUrl;
+    }
+
     public Long getIdEquipo() {
         return idEquipo;
     }
