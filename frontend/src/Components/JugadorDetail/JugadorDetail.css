@@ -1,0 +1,43 @@
+.jugador-detail-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  .jugador-detail-image-container {
+    flex-shrink: 0;
+    margin-right: 20px;
+  }
+  
+  .jugador-detail-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .jugador-detail-info {
+    flex-grow: 1;
+  }
+  
+  .jugador-detail-info h2 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #333;
+  }
+  
+  .jugador-detail-info p {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #666;
+  }
+  
+  .jugador-detail-info strong {
+    color: #000;
+  }
+  
