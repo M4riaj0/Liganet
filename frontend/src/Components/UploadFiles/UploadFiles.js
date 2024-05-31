@@ -27,6 +27,7 @@ const UploadFiles = ({ onUpload }) => {
       if (onUpload) {
         onUpload(uploadedUrl);
       }
+      
     } catch (error) {
       console.error('Error uploading the file', error);
     }
@@ -36,11 +37,11 @@ const UploadFiles = ({ onUpload }) => {
     <div className="upload-files">
       <input type="file" onChange={handleFileChange} />
       <button type="button" onClick={handleUpload}>Añadir</button>
-      {/* {fileUrl && (
+      {fileUrl && (
         <p>
           File uploaded: <a href={fileUrl} target="_blank" rel="noopener noreferrer">{fileUrl}</a>
         </p>
-      )} */}
+      )}
     </div>
   );
 };
