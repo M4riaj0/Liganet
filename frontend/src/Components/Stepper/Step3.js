@@ -42,8 +42,8 @@ const Step3 = ({ formData, handleChange, handleBack, handleSubmit, handleFotoPer
             Nombre de usuario:
             <input
               type='text'
-              name='nombre_usuario'
-              value={formData.nombre_usuario}
+              name='nombreUsuario'
+              value={formData.nombreUsuario}
               onChange={handleChange}
             />
           </label>
