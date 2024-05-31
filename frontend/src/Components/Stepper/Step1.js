@@ -10,7 +10,7 @@ const Step1 = ({formData, handleChange, handleNext}) => {
                     Nombre Completo:
                     <input
                         type='text'
-                        name='NombreCompleto'
+                        name='nombreCompleto'
                         value={formData.nombreCompleto}
                         onChange={handleChange}
                     />
@@ -19,7 +19,7 @@ const Step1 = ({formData, handleChange, handleNext}) => {
                     <label>
                         Numero de documento:
                         <input
-                            name='NumeroDocumento'
+                            name='cedula'
                             value={formData.cedula}
                             onChange={handleChange}
                         />
@@ -28,8 +28,8 @@ const Step1 = ({formData, handleChange, handleNext}) => {
                         Lugar de expedicion:
                         <input
                             type='text'
-                            name='LugarExpedicion'
-                            value={formData.LugarExpedicion}
+                            name='lugarExpedicion'
+                            value={formData.lugarExpedicion}
                             onChange={handleChange}
                         />
                     </label>
@@ -39,8 +39,8 @@ const Step1 = ({formData, handleChange, handleNext}) => {
                         Fecha de nacimiento:
                         <input
                             type='date'
-                            name='FechaNacimiento'
-                            value={formData.FechaNacimiento}
+                            name='fechaNacimiento'
+                            value={formData.fechaNacimiento}
                             onChange={handleChange}
                         />
                     </label>
@@ -48,8 +48,8 @@ const Step1 = ({formData, handleChange, handleNext}) => {
                         Celular:
                         <input
                             type='number'
-                            name='Celular'
-                            value={formData.Celular}
+                            name='celular'
+                            value={formData.celular}
                             onChange={handleChange}
                         />
                     </label>
@@ -59,8 +59,8 @@ const Step1 = ({formData, handleChange, handleNext}) => {
                         Genero:
                         <input
                             type='text'
-                            name='Genero'
-                            value={formData.Genero}
+                            name='genero'
+                            value={formData.genero}
                             onChange={handleChange}
                         />
                     </label>
@@ -68,8 +68,8 @@ const Step1 = ({formData, handleChange, handleNext}) => {
                         Nacionalidad:
                         <input
                             type='text'
-                            name='Nacionalidad'
-                            value={formData.Nacionalidad}
+                            name='nacionalidad'
+                            value={formData.nacionalidad}
                             onChange={handleChange}
                         />
                     </label>
@@ -79,8 +79,8 @@ const Step1 = ({formData, handleChange, handleNext}) => {
                         País de residencia:
                         <input
                             type='text'
-                            name='Pais'
-                            value={formData.Pais}
+                            name='pais'
+                            value={formData.pais}
                             onChange={handleChange}
                         />
                     </label>
@@ -88,8 +88,8 @@ const Step1 = ({formData, handleChange, handleNext}) => {
                         Departamento:
                         <input
                             type='text'
-                            name='Departamento'
-                            value={formData.Departamento}
+                            name='departamento'
+                            value={formData.departamento}
                             onChange={handleChange}
                         />
                     </label>
@@ -99,8 +99,8 @@ const Step1 = ({formData, handleChange, handleNext}) => {
                         Direccion:
                         <input
                             type='text'
-                            name='Direccion'
-                            value={formData.Direccion}
+                            name='direccion'
+                            value={formData.direccion}
                             onChange={handleChange}
                         />
                     </label>
@@ -108,8 +108,8 @@ const Step1 = ({formData, handleChange, handleNext}) => {
                         Ciudad:
                         <input
                             type='text'
-                            name='Ciudad'
-                            value={formData.Ciudad}
+                            name='ciudad'
+                            value={formData.ciudad}
                             onChange={handleChange}
                         />
                     </label>
