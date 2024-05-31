@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
 import "./ReservationDialog.css";
+import {booking} from "../../Services/booking";
 
 const ReservationDialog = ({ isOpen, onRequestClose, idCancha, precioCancha }) => {
   const [cantidadHoras, setCantidadHoras] = useState(1);
@@ -27,13 +28,21 @@ const ReservationDialog = ({ isOpen, onRequestClose, idCancha, precioCancha }) =
     console.log("Datos de reserva:", reservaData);
     // Aquí puedes enviar la reserva al backend
     onRequestClose();
+    booking(reservaData)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+
   };
 
   return (
     <Modal isOpen={isOpen} onRequestClose={onRequestClose}>
       <h2>Reserva la Cancha</h2>
       <form onSubmit={handleSubmit}>
-        <input type="hidden" value={idCancha} name="id_cancha" />
+        <input type="hidden" value={idCancha} name="idCancha" />
         <label>
           Fecha:
           <input type="date" name="fecha" required />
@@ -46,22 +55,22 @@ const ReservationDialog = ({ isOpen, onRequestClose, idCancha, precioCancha }) =
           Cantidad de Horas:
           <input
             type="number"
-            name="cantidad_horas"
+            name="cantidadHoras"
             min="1"
             value={cantidadHoras}
             onChange={(e) => setCantidadHoras(e.target.value)}
             required
           />
         </label>
-        {/* Agrega el campo para id_persona desde localStorage */}
+        {/* Agrega el campo para     id_persona desde localStorage */}
         <input
           type="hidden"
           value={currentUser.idUser}
-          name="id_persona"
+          name="idPersona"
         /> 
         <label>
           Precio Total:
-          <input type="text" value={precioTotal} readOnly />
+          <input type="text" name="precioTotal" value={precioTotal} readOnly />
         </label>
         <button type="submit">Reservar</button>
       </form>
