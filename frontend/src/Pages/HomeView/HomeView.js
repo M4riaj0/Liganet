@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Card from '../../Components/Card/Card';
-import DetailDialog from '../../Components/DetailDialog';
+import DetailDialog from '../../Components/DetailDialog/DetailDialog';
 import './HomeView.css';
 
 const HomeView = ({ jugadores, torneos }) => {
@@ -52,7 +52,12 @@ const HomeView = ({ jugadores, torneos }) => {
           ))}
         </div>
       </div>
-      <DetailDialog open={dialogIsOpen} onClose={closeDialog} type={detailType} data={selectedDetail} />
+      <DetailDialog
+        open={dialogIsOpen}
+        onClose={closeDialog}
+        type={detailType}
+        data={selectedDetail}
+      />
     </div>
   );
 };

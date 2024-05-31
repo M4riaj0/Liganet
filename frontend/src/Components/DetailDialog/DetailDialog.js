@@ -1,14 +1,15 @@
 import React from 'react';
-import Dialog from '@material-ui/core/Dialog';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import DialogContent from '@material-ui/core/DialogContent';
-import CanchaDetail from './CanchaDetail/';
-import JugadorDetail from './JugadorDetail';
-import EquipoDetail from './EquipoDetail';
-import TorneoDetail from './TorneoDetail';
+import Dialog from '@mui/material/Dialog';
+import DialogTitle from '@mui/material/DialogTitle';
+import DialogContent from '@mui/material/DialogContent';
+import CanchaDetail from '../CanchaDetail/CanchaDetail';
+import JugadorDetail from '../JugadorDetail/JugadorDetail';
+import EquipoDetail from '../EquipoDetail/EquipoDetail';
+import TorneoDetail from '../TorneoDetail/TorneoDetail';
 
 const DetailDialog = ({ open, onClose, type, data }) => {
   const renderDetail = () => {
+    if (!data) return null;
     switch (type) {
       case 'cancha':
         return <CanchaDetail cancha={data} />;
@@ -25,10 +26,12 @@ const DetailDialog = ({ open, onClose, type, data }) => {
 
   return (
     <Dialog open={open} onClose={onClose} maxWidth="md" fullWidth>
-      <DialogTitle>{data.nombre || data.nombreCompleto || data.nombreEquipo || data.nombreTorneo}</DialogTitle>
-      <DialogContent>
-        {renderDetail()}
-      </DialogContent>
+      <DialogTitle>
+        {data
+          ? data.nombre || data.nombreCompleto || data.nombreEquipo || data.nombreTorneo
+          : ''}
+      </DialogTitle>
+      <DialogContent>{renderDetail()}</DialogContent>
     </Dialog>
   );
 };
