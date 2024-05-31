@@ -7,7 +7,7 @@ const FilterBar = ({ onReset, onFilter }) => {
 
   const handleFilterChange = (filter) => {
     setSelectedFilter(filter);
-    onFilter(filter);
+    onFilter(filter); // Enviar la opción de filtro seleccionada al Home
   };
 
   return (

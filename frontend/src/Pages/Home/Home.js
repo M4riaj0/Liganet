@@ -16,6 +16,7 @@ const Home = () => {
   const [torneos, setTorneos] = useState([]);
   const [equipos, setEquipos] = useState([]);
   const [canchas, setCanchas] = useState([]);
+  const navigate = useNavigate();
 
   const handleSearchClick = (query) => {
     console.log('Búsqueda en Home:', query);
@@ -30,6 +31,7 @@ const Home = () => {
   const handleResetFilters = () => {
     console.log('Filtros restablecidos');
     setFilter('');
+    setSearchQuery(''); // Restablecer también el término de búsqueda
     fetchAllData();
   };
 
@@ -52,32 +54,48 @@ const Home = () => {
   };
 
   const fetchFilteredData = async (filter, query) => {
-    if (filter === 'jugadores') {
-      setJugadores(await fetchJugadores(query));
-      setTorneos([]);
-      setEquipos([]);
-      setCanchas([]);
-    } else if (filter === 'torneos') {
-      setJugadores([]);
-      setTorneos(await fetchTorneos(query));
-      setEquipos([]);
-      setCanchas([]);
-    } else if (filter === 'equipos') {
-      setJugadores([]);
-      setTorneos([]);
-      setEquipos(await fetchEquipos(query));
-      setCanchas([]);
-    } else if (filter === 'canchas') {
-      setJugadores([]);
-      setTorneos([]);
-      setEquipos([]);
-      setCanchas(await fetchCanchas(query));
+    if (!filter) { // Si no se ha seleccionado ningún filtro
+      const [jugadoresData, torneosData, equiposData, canchasData] = await Promise.all([
+        fetchJugadores(query),
+        fetchTorneos(query),
+        fetchEquipos(query),
+        fetchCanchas(query)
+      ]);
+      setJugadores(jugadoresData);
+      setTorneos(torneosData);
+      setEquipos(equiposData);
+      setCanchas(canchasData);
+    } else { // Si se ha seleccionado un filtro específico
+      if (filter === 'jugadores') {
+        setJugadores(await fetchJugadores(query));
+        setTorneos([]);
+        setEquipos([]);
+        setCanchas([]);
+      } else if (filter === 'torneos') {
+        setJugadores([]);
+        setTorneos(await fetchTorneos(query));
+        setEquipos([]);
+        setCanchas([]);
+      } else if (filter === 'equipos') {
+        setJugadores([]);
+        setTorneos([]);
+        setEquipos(await fetchEquipos(query));
+        setCanchas([]);
+      } else if (filter === 'canchas') {
+        setJugadores([]);
+        setTorneos([]);
+        setEquipos([]);
+        setCanchas(await fetchCanchas(query));
+      }
     }
   };
 
   useEffect(() => {
     if (view === 'search') {
       fetchFilteredData(filter, searchQuery);
+    } else {
+      // Si volvemos al modo de vista 'home', restablecemos los datos
+      fetchAllData();
     }
   }, [view, searchQuery, filter]);
 

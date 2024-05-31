@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/player")
+@RequestMapping( "/api/player" )
 public class PlayerController {
 
     @Autowired

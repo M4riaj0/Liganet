@@ -10,7 +10,7 @@ const SearchView = ({ jugadores, torneos, equipos, canchas }) => {
         <h1>Jugadores</h1>
         <Carousel>
           {jugadores.map((jugador, index) => (
-            <Card key={index} title={jugador.title} description={jugador.description} image={jugador.image} />
+            <Card key={index} title={jugador.nombreCompleto} description={jugador.posicionPrincipal} image={jugador.fotoUrl} />
           ))}
         </Carousel>
       </span>
@@ -18,7 +18,7 @@ const SearchView = ({ jugadores, torneos, equipos, canchas }) => {
         <h1>Torneos</h1>
         <Carousel>
           {torneos.map((torneo, index) => (
-            <Card key={index} title={torneo.title} description={torneo.description} />
+            <Card key={index} title={ torneo.nombreTorneo } description={torneo.descripcion} image={ torneo.fotoUrl }/>
           ))}
         </Carousel>
       </div>
@@ -26,7 +26,7 @@ const SearchView = ({ jugadores, torneos, equipos, canchas }) => {
         <h1>Equipos</h1>
         <Carousel>
           {equipos.map((equipo, index) => (
-            <Card key={index} title={equipo.title} description={equipo.description} />
+            <Card key={index} title={ equipo.nombreEquipo } description={equipo.descripcion} image={ equipo.fotoUrl } />
           ))}
         </Carousel>
       </div>
