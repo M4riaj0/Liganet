@@ -39,6 +39,7 @@ public class TeamService {
             equipo.setDescripcion(request.getDescripcion());
             equipo.setCiudad(request.getCiudad());
             equipo.setCantidadMiembros(request.getCantidadMiembros());
+            equipo.setFotoUrl(request.getFotoUrl());
             equipoRepository.save(equipo);
         }
         return equipoFound;

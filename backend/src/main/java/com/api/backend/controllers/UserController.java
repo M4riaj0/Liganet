@@ -34,13 +34,40 @@ public class UserController {
     private PlayerService playerService;
 
     @GetMapping
-    public ArrayList<UserModel> getAllUsers() {
-        return this.userService.getAllUsers();
+    public ArrayList<CreateUserDTO> getAllUsers() {
+        ArrayList<CreateUserDTO> responseList = new ArrayList<>();
+        ArrayList<UserModel> users = this.userService.getAllUsers();
+        for (UserModel user : users) {
+            CreateUserDTO responseItem = new CreateUserDTO();
+            responseItem.setUser(user);
+            Optional<PlayerModel> playerOptional = this.playerService.getPlayerByUser(user.getIdUser());
+            PlayerModel player = playerOptional.orElse(null);
+            responseItem.setPlayer(player);
+            if(user.getIdDireccion() != null){
+                Optional<AddressModel> addressOptional = this.addressService.getAddressById(user.getIdDireccion());
+                AddressModel address = addressOptional.orElse(null);
+                responseItem.setAddress(address);
+            }
+            responseList.add(responseItem);
+        }
+        return responseList;
     }
 
     @GetMapping("/{id}")
-    public Optional<UserModel> getUserById(@PathVariable("id") Long id) {
-        return this.userService.getUserById(id);
+    public CreateUserDTO getUserById(@PathVariable("id") Long id) {
+        Optional<UserModel> userOptional = this.userService.getUserById(id);
+        CreateUserDTO responseItem = new CreateUserDTO();
+        UserModel user = userOptional.orElse(null);
+        responseItem.setUser(user);
+        Optional<PlayerModel> playerOptional = this.playerService.getPlayerByUser(user.getIdUser());
+        PlayerModel player = playerOptional.orElse(null);
+        responseItem.setPlayer(player);
+        if(user.getIdDireccion() != null){
+            Optional<AddressModel> addressOptional = this.addressService.getAddressById(user.getIdDireccion());
+            AddressModel address = addressOptional.orElse(null);
+            responseItem.setAddress(address);
+        }
+        return responseItem;
     }
 
     @GetMapping("/name/{name}")
