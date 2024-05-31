@@ -20,6 +20,7 @@ const Step1 = ({formData, handleChange, handleNext}) => {
                         Numero de documento:
                         <input
                             name='NumeroDocumento'
+                            type="text"
                             value={formData.cedula}
                             onChange={handleChange}
                         />
@@ -29,7 +30,7 @@ const Step1 = ({formData, handleChange, handleNext}) => {
                         <input
                             type='text'
                             name='LugarExpedicion'
-                            value={formData.LugarExpedicion}
+                            value={formData.lugarExpedicion}
                             onChange={handleChange}
                         />
                     </label>
@@ -40,16 +41,16 @@ const Step1 = ({formData, handleChange, handleNext}) => {
                         <input
                             type='date'
                             name='FechaNacimiento'
-                            value={formData.FechaNacimiento}
+                            value={formData.fechaNacimiento}
                             onChange={handleChange}
                         />
                     </label>
                     <label>
                         Celular:
                         <input
-                            type='number'
+                            type='text'
                             name='Celular'
-                            value={formData.Celular}
+                            value={formData.celular}
                             onChange={handleChange}
                         />
                     </label>
@@ -60,7 +61,7 @@ const Step1 = ({formData, handleChange, handleNext}) => {
                         <input
                             type='text'
                             name='Genero'
-                            value={formData.Genero}
+                            value={formData.genero}
                             onChange={handleChange}
                         />
                     </label>
@@ -69,7 +70,7 @@ const Step1 = ({formData, handleChange, handleNext}) => {
                         <input
                             type='text'
                             name='Nacionalidad'
-                            value={formData.Nacionalidad}
+                            value={formData.nacionalidad}
                             onChange={handleChange}
                         />
                     </label>
@@ -80,7 +81,7 @@ const Step1 = ({formData, handleChange, handleNext}) => {
                         <input
                             type='text'
                             name='Pais'
-                            value={formData.Pais}
+                            value={formData.pais}
                             onChange={handleChange}
                         />
                     </label>
@@ -89,7 +90,7 @@ const Step1 = ({formData, handleChange, handleNext}) => {
                         <input
                             type='text'
                             name='Departamento'
-                            value={formData.Departamento}
+                            value={formData.departamento}
                             onChange={handleChange}
                         />
                     </label>
@@ -100,7 +101,7 @@ const Step1 = ({formData, handleChange, handleNext}) => {
                         <input
                             type='text'
                             name='Direccion'
-                            value={formData.Direccion}
+                            value={formData.direccion}
                             onChange={handleChange}
                         />
                     </label>
@@ -109,7 +110,7 @@ const Step1 = ({formData, handleChange, handleNext}) => {
                         <input
                             type='text'
                             name='Ciudad'
-                            value={formData.Ciudad}
+                            value={formData.ciudad}
                             onChange={handleChange}
                         />
                     </label>

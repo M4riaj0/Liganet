@@ -1,1 +1,2 @@
 npm install react react-dom react-router-dom axios react-icons
+npm i @cloudinary/url-gen @cloudinary/react

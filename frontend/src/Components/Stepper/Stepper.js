@@ -15,7 +15,7 @@ const Stepper = ({steps, onSubmit}) => {
         cedula: '',
         lugar_expedicion: '',
         fecha_nacimiento: '',
-        celular: 0,
+        celular: '',
         genero: '',
         nacionalidad: '',
         pais: '',
