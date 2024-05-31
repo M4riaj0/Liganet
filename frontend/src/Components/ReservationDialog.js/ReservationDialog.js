@@ -62,7 +62,7 @@ const ReservationDialog = ({ isOpen, onRequestClose, idCancha, precioCancha }) =
             required
           />
         </label>
-        {/* Agrega el campo para id_persona desde localStorage */}
+        {/* Agrega el campo para     id_persona desde localStorage */}
         <input
           type="hidden"
           value={currentUser.idUser}
