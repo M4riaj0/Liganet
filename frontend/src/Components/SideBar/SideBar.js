@@ -9,9 +9,14 @@ const Sidebar = ({ onHomeClick }) => {
     navigate('/Reserve'); // Navega a /Reserve
   };
 
+  const handleHomeClick = () => {
+    onHomeClick();
+    navigate('/Home'); // Navega a /
+  };
+
   return (
     <div className="sidebar-container">
-      <div className="menu-item" onClick={onHomeClick} >Inicio</div>
+      <div className="menu-item" onClick={handleHomeClick} >Inicio</div>
       <div className="menu-item">Perfil</div>
       <div className="menu-item">Equipo</div>
       <div className="menu-item" onClick={handleReserveClick}>Reservas</div> {/* Usa handleReserveClick */}

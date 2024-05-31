@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import NavBar from '../../Components/NavBar/NavBar';
 import SideBar from '../../Components/SideBar/SideBar';
 import HomeView from '../HomeView/HomeView';
@@ -7,6 +8,7 @@ import FilterBar from '../../Components/FilterBar/FilterBar';
 import './Home.css';
 
 const Home = () => {
+
   const [view, setView] = useState('home'); // 'home' or 'search'
 
   const handleSearchClick = () => {

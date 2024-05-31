@@ -28,6 +28,7 @@ const Step1 = ({formData, handleChange, handleNext}) => {
                         Lugar de expedicion:
                         <input
                             type='text'
+
                             name='lugarExpedicion'
                             value={formData.lugarExpedicion}
                             onChange={handleChange}
@@ -39,6 +40,7 @@ const Step1 = ({formData, handleChange, handleNext}) => {
                         Fecha de nacimiento:
                         <input
                             type='date'
+
                             name='fechaNacimiento'
                             value={formData.fechaNacimiento}
                             onChange={handleChange}
@@ -47,6 +49,7 @@ const Step1 = ({formData, handleChange, handleNext}) => {
                     <label>
                         Celular:
                         <input
+
                             type='number'
                             name='celular'
                             value={formData.celular}
@@ -79,6 +82,7 @@ const Step1 = ({formData, handleChange, handleNext}) => {
                         País de residencia:
                         <input
                             type='text'
+
                             name='pais'
                             value={formData.pais}
                             onChange={handleChange}
@@ -99,6 +103,7 @@ const Step1 = ({formData, handleChange, handleNext}) => {
                         Direccion:
                         <input
                             type='text'
+
                             name='direccion'
                             value={formData.direccion}
                             onChange={handleChange}
@@ -108,6 +113,7 @@ const Step1 = ({formData, handleChange, handleNext}) => {
                         Ciudad:
                         <input
                             type='text'
+
                             name='ciudad'
                             value={formData.ciudad}
                             onChange={handleChange}
