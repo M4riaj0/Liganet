@@ -47,8 +47,8 @@ const Step2 = ({ formData, handleChange, handleNext, handleBack, handleFotoUrlUp
                         Años de experiencia:
                         <input
                             type='number'
-                            name='años_experiencia'
-                            value={formData.años_experiencia}
+                            name='añosExperiencia'
+                            value={formData.añosExperiencia}
                             onChange={handleChange}
                         />
                     </label>
@@ -58,9 +58,9 @@ const Step2 = ({ formData, handleChange, handleNext, handleBack, handleFotoUrlUp
                     <label>
                         Nivel de competencia:
                         <input
-                            type='text'
-                            name='nivel_competencia'
-                            value={formData.nivel_competencia}
+                            type='number'
+                            name='nivelCompetencia'
+                            value={formData.nivelCompetencia}
                             onChange={handleChange}
                         />
                     </label>
@@ -68,8 +68,8 @@ const Step2 = ({ formData, handleChange, handleNext, handleBack, handleFotoUrlUp
                         Número de equipación:
                         <input
                             type='number'
-                            name='numero_equipacion'
-                            value={formData.numero_equipacion}
+                            name='numeroEquipacion'
+                            value={formData.numeroEquipacion}
                             onChange={handleChange}
                         />
                     </label>
@@ -80,8 +80,8 @@ const Step2 = ({ formData, handleChange, handleNext, handleBack, handleFotoUrlUp
                         Perfil dominante:
                         <input
                             type='text'
-                            name='perfil_dominante'
-                            value={formData.perfil_dominante}
+                            name='perfilDominante'
+                            value={formData.perfilDominante}
                             onChange={handleChange}
                         />
                     </label>
@@ -101,8 +101,8 @@ const Step2 = ({ formData, handleChange, handleNext, handleBack, handleFotoUrlUp
                         Pierna dominante:
                         <input
                             type='text'
-                            name='pierna_dominante'
-                            value={formData.pierna_dominante}
+                            name='piernaDominante'
+                            value={formData.piernaDominante}
                             onChange={handleChange}
                         />
                     </label>
@@ -110,8 +110,8 @@ const Step2 = ({ formData, handleChange, handleNext, handleBack, handleFotoUrlUp
                         Posición principal:
                         <input
                             type='text'
-                            name='posicion_principal'
-                            value={formData.posicion_principal}
+                            name='posicionPrincipal'
+                            value={formData.posicionPrincipal}
                             onChange={handleChange}
                         />
                     </label>
@@ -119,8 +119,8 @@ const Step2 = ({ formData, handleChange, handleNext, handleBack, handleFotoUrlUp
                         Posición secundaria:
                         <input
                             type='text'
-                            name='posicion_secundaria'
-                            value={formData.posicion_secundaria}
+                            name='posicionSecundaria'
+                            value={formData.posicionSecundaria}
                             onChange={handleChange}
                         />
                     </label>
