@@ -36,7 +36,7 @@
 .input-icon {
   position: absolute;
   right: 10px;
-  top: 50%;
+  top: 48%;
   transform: translateY(-50%);
   pointer-events: none; /* Asegura que el icono no interfiera con la interacción del input */
 }

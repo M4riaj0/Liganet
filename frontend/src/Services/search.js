@@ -50,3 +50,22 @@ export const fetchCanchas = async (query) => {
         throw error;
     }
 };
+
+export const fetchReservasUsuario = async () => {
+    try{
+        const user = JSON.parse(localStorage.getItem('user'));
+        if(!user){
+            throw new Error('No se encontró información de usuario en el almacenamiento local');
+        }
+        const response = await axios.get(`${API_BASE_URL}/booking/user/${user.idUser}`);
+        console.log(user.id);
+        console.log("reservas::", response.data);
+
+        return response.data;
+    } catch (error) {
+        console.error('Error al obtener reservas:', error);
+        throw error;
+    }
+};
+
+export default fetchReservasUsuario;

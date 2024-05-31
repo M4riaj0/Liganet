@@ -4,6 +4,8 @@ import './Login.css';
 import login from '../../Services/auth';
 import InputBox from '../../Components/InputBox/InputBox';
 import {FaUser, FaLock } from 'react-icons/fa';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const LoginForm = ({ handleLogin }) => {
@@ -26,6 +28,7 @@ const LoginForm = ({ handleLogin }) => {
       await login(formData.usuario, formData.contraseña);
       handleLogin();
       setLoggedIn(true);
+      toast.success('Inicio de sesión exitoso');
     } catch (error) {
       setError(error.message);
     }
@@ -72,11 +75,11 @@ const LoginForm = ({ handleLogin }) => {
               placeholder='Contraseña'
               value={formData.contraseña}
               onChange={handleChange}
+              
             />
             <button type="submit" className='button'>Ingresar</button>
           </form>
           <Link to='/SignUp' className='link'>Crear una cuenta</Link>
-          Registrarse como propietario
           {error && <p className="error-message">{error}</p>}
         </div>
       </div>
