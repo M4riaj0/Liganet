@@ -43,6 +43,7 @@ const ReservationDialog = ({ isOpen, onRequestClose, idCancha, precioCancha }) =
       <h2>Reserva la Cancha</h2>
       <form onSubmit={handleSubmit}>
         <input type="hidden" value={idCancha} name="idCancha" />
+        <div className="VariosCampos">
         <label>
           Fecha:
           <input type="date" name="fecha" required />
@@ -51,6 +52,8 @@ const ReservationDialog = ({ isOpen, onRequestClose, idCancha, precioCancha }) =
           Hora:
           <input type="time" name="hora" required />
         </label>
+        </div>
+        <div className="VariosCampos">
         <label>
           Cantidad de Horas:
           <input
@@ -62,19 +65,22 @@ const ReservationDialog = ({ isOpen, onRequestClose, idCancha, precioCancha }) =
             required
           />
         </label>
-        {/* Agrega el campo para     id_persona desde localStorage */}
+        <label>
+          Precio Total:
+          <input type="text" name="precioTotal" value={precioTotal} readOnly />
+        </label>
+        </div>
+        {/* Agrega el campo para           id_persona desde localStorage */}
         <input
           type="hidden"
           value={currentUser.idUser}
           name="idPersona"
         /> 
-        <label>
-          Precio Total:
-          <input type="text" name="precioTotal" value={precioTotal} readOnly />
-        </label>
+        <div className="ButtonContainer">
         <button type="submit">Reservar</button>
+        <button onClick={onRequestClose}>Cerrar</button>
+        </div>
       </form>
-      <button onClick={onRequestClose}>Cerrar</button>
     </Modal>
   );
 };

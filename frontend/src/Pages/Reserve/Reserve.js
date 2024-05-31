@@ -82,12 +82,12 @@ const ReserveView = () => {
                             <h3 className='TitleReservations'> Mis Reservas </h3>
                             {reservas.map((reserva) => (
                                 <ReserveCard
-                                    key={reserva.id_reserva}
+                                    id_reserva={reserva.idReserva}
                                     fecha={reserva.fecha}
                                     hora={reserva.hora}
-                                    cantidad_horas={reserva.cantidad_horas}
-                                    precio_total={reserva.precio_total}
-                                    id_cancha={reserva.id_cancha} />
+                                    cantidad_horas={reserva.cantidadHoras}
+                                    precio_total={reserva.precioTotal}
+                                    id_cancha={reserva.idCancha} />
                             ))}
                         </div>
                         <div className="available-courts">
